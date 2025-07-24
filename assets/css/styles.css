@@ -140,7 +140,8 @@ body {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 14px; /* make arrow icon smaller */
+    font-size: 14px;
+    /* make arrow icon smaller */
 }
 
 
@@ -183,7 +184,7 @@ body {
 /* Hero Styles */
 .hero {
     position: relative;
-    height: clamp(300px, 30vh, 200px);
+    height: 300px;
     font-family: 'Cinzel', serif;
     color: #ffffff;
     background: url('../img/bg.jpg') top center no-repeat;
@@ -287,5 +288,29 @@ body {
     100% {
         transform: translateX(100vw) scaleX(-1);
         opacity: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero {
+        height: 200px;
+        text-align: center;
+        font-size: .7rem;
+    }
+
+    .drag-overlay {
+        width: 180px;
+    }
+
+    .drag1 {
+        top: 8vw !important;
+    }
+
+    .drag2 {
+        top: -5vw !important;
+    }
+
+    .drag3 {
+        top: 19vw !important;
     }
 }
