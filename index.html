@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philip Alili - Portfolio</title>
+    <link rel="icon" href="assets/img/3.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="p-0 p-lg-3">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-card shadow-sm d-lg-none mb-3 px-2">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-semibold d-flex" href="#">
+                <img src="assets/img/1.png" alt="Logo" id="logo" class="rounded-circle me-2" width="40" height="40">
+            </a>
+
+            <div class="nav-item mb-0 list-unstyled">
+                <a class="nav-link d-flex align-items-center p-0" href="#" id="accountDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-bars fs-4 nav-toggle-icon"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end mx-2 bg-card" aria-labelledby="accountDropdown"
+                    data-bs-auto-close="outside">
+                    <li class="dropdown-header text-center">
+                        <img src="assets/img/me.png" alt="Profile" class="rounded-circle mb-2" width="40" height="40">
+                        <h6 class="fw-semibold mb-0">Philip Arland Alili</h6>
+                        <p class="text-muted small mb-2">Front-End Developer</p>
+                        <div class="contacts mb-1">
+                            <a href="#"><i class="text-secondary fab fa-facebook"></i></a>
+                            <a href="#"><i class="text-secondary fab fa-github"></i></a>
+                            <a href="#"><i class="text-secondary fab fa-linkedin"></i></a>
+                            <a href="#"><i class="text-secondary fas fa-envelope"></i></a>
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-dark active">
+                            <i class="fas fa-home me-3" style="width: 20px;"></i> Home
+                        </a>
+                        <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-muted">
+                            <i class="fas fa-briefcase me-3" style="width: 20px;"></i> Projects
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <div class="p-3 mb-0">
+                            <div
+                                class="gap-2 text-muted small mb-2 bg-subtle p-2 rounded d-flex justify-content-between">
+                                <span><i class="fas fa-moon px-2"></i>Dark Mode</span>
+                                <div class="toggle-switch" onclick="toggleDarkMode()"></div>
+                            </div>
+                            <div class="text-muted small px-1" style="font-size: 0.75rem;">
+                                <div class="text-center">© 2025 | Designed by Philip Arland Alili</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row gx-3">
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="sidebar card rounded-4 border-0 d-flex justify-content-between">
+                    <div class="side-top">
+                        <div class="profile text-center p-4">
+                            <img src="assets/img/me.png" alt="Profile" class="profile-img rounded-circle mb-3">
+                            <h5 class="fw-semibold mb-0">Philip Arland Alili</h5>
+                            <p class="text-muted small mb-2">Front-End Developer</p>
+
+                            <div class="contacts mb-2">
+                                <a href="#"><i class="text-secondary fab fa-facebook"></i></a>
+                                <a href="#"><i class="text-secondary fab fa-github"></i></a>
+                                <a href="#"><i class="text-secondary fab fa-linkedin"></i></a>
+                                <a href="#"><i class="text-secondary fas fa-envelope"></i></a>
+                            </div>
+
+                            <!-- <a href="#" class="btn btn-sm btn-outline-dark px-3 d-inline-flex align-items-center gap-2">
+                                <i class="fas fa-download"></i> Download Resume
+                            </a> -->
+
+                            <hr>
+                        </div>
+
+                        <nav class="py-3">
+                            <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-dark active">
+                                <i class="fas fa-home me-3" style="width: 20px;"></i> Home
+                            </a>
+                            <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-muted">
+                                <i class="fas fa-briefcase me-3" style="width: 20px;"></i> Projects
+                            </a>
+                        </nav>
+                    </div>
+
+                    <div class="p-4 mb-0 pb-2">
+                        <div class="gap-2 text-muted small mb-2 bg-subtle p-2 rounded d-flex justify-content-between">
+                            <span><i class="fas fa-moon px-2"></i>Dark Mode</span>
+                            <div class="toggle-switch" onclick="toggleDarkMode()"></div>
+                        </div>
+
+                        <div class="text-muted small px-1" style="font-size: 0.75rem;">
+                            <div class="text-center"> © 2025 | Designed by Philip Arland Alili
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="hero mb-3">
+                    <div class="hero-text h-100 d-flex justify-content-center align-items-end pt-4">
+                        <p class=" text-light fst-italic">Explore the realm where code meets creativity.</p>
+                    </div>
+                    <div class="drag-wrapper">
+                        <img src="assets/img/drag.gif" alt="" class="drag-overlay drag1" />
+                        <img src="assets/img/drag.gif" alt="" class="drag-overlay drag2" />
+                        <img src="assets/img/drag.gif" alt="" class="drag-overlay drag3" />
+                    </div>
+                </div>
+
+                <div class="row gx-3">
+                    <div class="col-lg-6 d-flex flex-column">
+                        <div class="card shadow-none rounded-4 p-3 mb-3 border-0 flex-grow-1">
+                            <div class="heads d-flex justify-content-between">
+                                <h5 class="d-flex align-items-center gap-2 mb-3 fw-semibold">
+                                    <i class="fas fa-user text-purple"></i>
+                                    About Me
+                                </h5>
+                            </div>
+                            <p>
+                                I'm an aspiring Front-End Developer with a growing interest in building clean,
+                                responsive designs and user-friendly experiences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column">
+                        <div class="card shadow-none rounded-4 p-3 mb-3 border-0 flex-grow-1">
+                            <h5 class="d-flex align-items-center gap-2 mb-3 fw-semibold">
+                                <i class="fas fa-graduation-cap text-purple"></i>
+                                Education
+                            </h5>
+                            <div class="mb-3 d-flex align-items-center gap-3">
+                                <div class="logo flex-shrink-0">
+                                    <img src="assets/img/psu.jpg" alt="PSU Logo" class="rounded"
+                                        style="width: 60px; height: 60px; object-fit: cover;">
+                                </div>
+                                <div class="details px-3" style="border-left: 1px solid #202a456b;">
+                                    <h6 class="fw-bold mb-2">Bachelor of Science in Computer Science </h6>
+                                    <p class="text-muted small mb-0">Palawan State University</p>
+                                    <p class="text-muted small mb-1">2024 – 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row gx-3">
+                    <div class="col-lg-9 d-flex flex-column">
+                        <div class="overview card shadow-none rounded-4 p-4 mb-3 border-0 flex-grow-1">
+                            <h5 class="d-flex align-items-center gap-2 mb-4 fw-semibold">
+                                <i class="fas fa-layer-group text-purple"></i>
+                                Overview
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-4">
+                                    <div class="stat-card p-3 rounded-3 text-center h-100">
+                                        <div class="mb-2">
+                                            <i class="fas fa-user-graduate fs-3 text-primary"></i>
+                                        </div>
+                                        <h6 class="fw-bold mb-1">Level</h6>
+                                        <p class="small mb-0">Entry-Level Developer</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="stat-card p-3 rounded-3 text-center h-100">
+                                        <div class="mb-2">
+                                            <i class="fas fa-folder-open fs-3 text-success"></i>
+                                        </div>
+                                        <h6 class="fw-bold mb-1">Projects</h6>
+                                        <p class="small mb-0">10+ Non-Commercial</p>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="stat-card p-3 rounded-3 text-center h-100">
+                                        <div class="mb-2">
+                                            <i class="fab fa-react fs-3 text-info"></i>
+                                        </div>
+                                        <h6 class="fw-bold mb-1">Currently Learning</h6>
+                                        <p class="small mb-0">React.js</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 d-flex flex-column">
+                        <div class="card shadow-none rounded-4 p-3 mb-3 border-0 flex-grow-1">
+                            <h5 class="d-flex align-items-center gap-2 mb-4 fw-semibold">
+                                <i class="fas fa-tools text-purple"></i>
+                                Tech Stack
+                            </h5>
+                            <div class="row g-3 g-lg-0 h-100 d-flex align-items-center">
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="HTML5">
+                                        <i class="fab fa-html5 fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="CSS3">
+                                        <i class="fab fa-css3-alt fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="JavaScript">
+                                        <i class="fab fa-js fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="Bootstrap">
+                                        <i class="fab fa-bootstrap fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="PHP">
+                                        <i class="fab fa-php fa-2x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <div class="skill-icon" title="MySQL">
+                                        <i class="fas fa-database fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="projects card shadow-none rounded-4 p-4 mb-3 border-0">
+                    <div class="project-header d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="d-flex align-items-center gap-2 fw-semibold mb-0">
+                            <i class="fas fa-folder text-purple"></i>
+                            Featured Projects
+                        </h5>
+
+                        <!-- Navigation -->
+                        <div class="d-flex align-items-center gap-3 mt-3 mx-2">
+                            <div class="swiper-button-prev position-static"></div>
+                            <div class="swiper-button-next position-static"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Swiper container -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/shoewave.png" alt="Shoewave" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">E-Commerce Platform</h6>
+                                            <p class="text-muted small">
+                                                A modern e-commerce website for sneakers featuring clean, responsive
+                                                design.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                                <span class="badge bg-warning text-dark"><i
+                                                        class="fab fa-js"></i></span>
+                                                <span class="badge bg-purple"><i class="fab fa-bootstrap"></i></span>
+                                                <span class="badge bg-purple text-light"><i
+                                                        class="fab fa-php"></i></span>
+                                                <span class="badge bg-success"><i class="fas fa-database"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/sheenas.png" alt="Sheenas" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Pension House Website</h6>
+                                            <p class="text-muted small">
+                                                A clean, static site showcasing rooms, tour packages, and key guest
+                                                info.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                                <span class="badge bg-warning text-dark"><i
+                                                        class="fab fa-js"></i></span>
+                                                <span class="badge bg-secondary"><i class="fab fa-bootstrap"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/quiz.png" alt="Quiz Game" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Interactive Quiz Game</h6>
+                                            <p class="text-muted small">
+                                                A simple interactive math quiz focused on basic addition and
+                                                subtraction.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                                <span class="badge bg-warning text-dark"><i
+                                                        class="fab fa-js"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/anya.png" alt="SpyXFam" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Spy x Family Themed Page</h6>
+                                            <p class="text-muted small">
+                                                A simple themed webpage inspired by Spy x Family. Designed only with
+                                                HTML and CSS.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/haikyuu.png" alt="Haikyuu!!" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Haikyuu!! Fan Page</h6>
+                                            <p class="text-muted small">
+                                                A fan-made webpage dedicated to Haikyuu!! Built with HTML and CSS.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/old.png" alt="Old Portfolio" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Old Portfolio Website</h6>
+                                            <p class="text-muted small">
+                                                A previous version of my personal portfolio built with basic HTML, CSS,
+                                                and JavaScript.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                                <span class="badge bg-warning text-dark"><i
+                                                        class="fab fa-js"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                                    <img src="assets/img/pho.png" alt="PHO Dashboard" class="card-img-top">
+                                    <div class="card-body d-flex flex-column justify-content-between">
+                                        <div class="details mb-3">
+                                            <h6 class="fw-bold mb-2">Health Office Dashboard</h6>
+                                            <p class="text-muted small">
+                                                A responsive web dashboard for managing and visualizing health office
+                                                data.
+                                            </p>
+                                        </div>
+                                        <div class="tech-stack">
+                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                                <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
+                                                <span class="badge bg-info text-dark"><i
+                                                        class="fab fa-css3-alt"></i></span>
+                                                <span class="badge bg-warning text-dark"><i
+                                                        class="fab fa-js"></i></span>
+                                                <span class="badge bg-purple"><i class="fab fa-bootstrap"></i></span>
+                                                <span class="badge bg-purple text-light"><i
+                                                        class="fab fa-php"></i></span>
+                                                <span class="badge bg-success"><i class="fas fa-database"></i></span>
+                                            </div>
+                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Apply saved theme on load
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        const logo = document.getElementById('logo');
+
+        function toggleDarkMode() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                logo.src = 'assets/img/1.png';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                logo.src = 'assets/img/2.png';
+            }
+        }
+
+        const hero = document.querySelector('.hero');
+        const dragons = document.querySelectorAll('.drag-overlay');
+
+        hero.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth) * 80;
+            const y = (e.clientY / window.innerHeight) * 80;
+
+            hero.style.setProperty('--mouse-x', `${x}%`);
+            hero.style.setProperty('--mouse-y', `${y}%`);
+
+            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+
+            if (isDarkMode) {
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+
+                dragons.forEach((dragon) => {
+                    const rect = dragon.getBoundingClientRect();
+                    const dragonCenterX = rect.left + rect.width / 2;
+                    const dragonCenterY = rect.top + rect.height / 2;
+
+                    const distance = Math.hypot(mouseX - dragonCenterX, mouseY - dragonCenterY);
+
+                    if (distance < 150) {
+                        dragon.classList.add('lit');
+                    } else {
+                        dragon.classList.remove('lit');
+                    }
+                });
+            } else {
+                dragons.forEach((dragon) => dragon.classList.remove('lit'));
+            }
+        });
+    </script>
+    <script>
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                },
+                992: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
