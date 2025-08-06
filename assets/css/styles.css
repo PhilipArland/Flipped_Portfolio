@@ -31,6 +31,10 @@ body {
     background-color: var(--bg-body);
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .sidebar {
     display: flex;
     flex-direction: column;

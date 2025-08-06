@@ -52,3 +52,85 @@ if (hero) {
         }
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadHTML("sidebar-placeholder", "includes/sidebar.html", setActiveNavLinks);
+    loadHTML("navbar-placeholder", "includes/navbar.html");
+
+    // Inject featured projects (safer here)
+    const featuredPlaceholder = document.getElementById("featured_projects-placeholder");
+    if (featuredPlaceholder) {
+        featuredPlaceholder.innerHTML = generateFeaturedProjectsHTML();
+
+        new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                992: { slidesPerView: 3 },
+            },
+        });
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get("project");
+
+    if (projectId && projectsData[projectId]) {
+        displayProject(projectId);
+    }
+});
+
+function loadHTML(id, file, callback) {
+    fetch(file)
+        .then(response => {
+            if (!response.ok) throw new Error(`Failed to load ${file}`);
+            return response.text();
+        })
+        .then(data => {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerHTML = data;
+                if (typeof callback === 'function') callback();
+            }
+        })
+        .catch(error => {
+            console.error(`Error loading ${file}:`, error);
+        });
+}
+
+function setActiveNavLinks() {
+    const currentPath = window.location.pathname;
+
+    const links = document.querySelectorAll('#sidebar-placeholder a');
+    if (!links.length) return;
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        const linkURL = new URL(href, window.location.origin);
+
+        if (currentPath.endsWith(linkURL.pathname)) {
+            link.classList.add('active', 'text-dark');
+            link.classList.remove('text-muted');
+        } else {
+            link.classList.remove('active', 'text-dark');
+            link.classList.add('text-muted');
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    loadHTML("sidebar-placeholder", "includes/sidebar.html", setActiveNavLinks);
+    loadHTML("navbar-placeholder", "includes/navbar.html");
+
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get("project");
+
+    if (projectId && projectsData[projectId]) {
+        displayProject(projectId);
+    }
+});

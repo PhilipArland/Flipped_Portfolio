@@ -88,14 +88,14 @@ function generateFeaturedProjectsHTML() {
                 <div class="swiper-button-next position-static"></div>
             </div>
         </div>
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper p-0">
             <div class="swiper-wrapper">
     `;
 
     featuredProjects.forEach(project => {
         html += `
             <div class="swiper-slide">
-                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
                     <img src="${project.image}" alt="${project.title}" class="card-img-top">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="details mb-3">
@@ -122,97 +122,3 @@ function generateFeaturedProjectsHTML() {
     html += `</div></div>`;
     return html;
 }
-
-
-const projectsData = {
-    shoewave: {
-        logo: "assets/img/shoewave/logo.png",
-        title: "ShoeWave",
-        description: "<a href='https://shoewave.vercel.app' class='text-decoration-none text-info'>ShoeWave </a> is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
-        images: [
-            "assets/img/shoewave/shoewave.png",
-            "assets/img/shoewave/shoewave1.png",
-            "assets/img/shoewave/shoewave2.png"
-        ],
-        github: "https://github.com/PhilipArland/shoewave",
-    },
-
-    sheenas: {
-        logo: "assets/img/sheenas/logo.png",
-        title: "Pension House - Sheenas",
-        description: "<a href='https://sheenas.vercel.app' class='text-decoration-none text-info'>Sheenas</a> is a static website built to showcase a local pension house. It presents available rooms, food menu, and tour package prices in a clean and organized layout. Designed with HTML, CSS, JavaScript, and Bootstrap, the site is responsive and easy to navigate, offering visitors a simple way to explore the offerings of the establishment.",
-        images: [
-            "assets/img/sheenas/sheenas_cut.png",
-            "assets/img/sheenas/sheenas1.png",
-            "assets/img/sheenas/sheenas2.png",
-            "assets/img/sheenas/sheenas3.png",
-            "assets/img/sheenas/sheenas4.png",
-        ],
-        github: "https://github.com/PhilipArland/sheenas",
-    },
-};
-
-function displayProject(projectId) {
-    const project = projectsData[projectId];
-    const container = document.getElementById("featured_projects-placeholder");
-    container.innerHTML = ''; // Clear any existing content
-
-    const project_card = document.createElement("div");
-    project_card.className = "project_card";
-
-    // Add images
-    const imagesHtml = project.images.map(src =>
-        `<img src="${src}" class="img-fluid rounded-4 mb-3" alt="${project.title}">`
-    ).join("");
-
-
-    project_card.innerHTML = `
-    <div class="p-0">
-        <div class="mb-3">
-            <a href="projects.html" class="text-back">
-                <i class="fas fa-arrow-left me-1"></i></a>
-        </div>
-
-        <div class="title d-flex">
-            <img src="${project.logo}" alt="${project.title} Logo" class="img-fluid mb-2 me-1 rounded-circle" heigth="25" width="25">
-            <h4 class="fw-bold lead">${project.title}</h4>
-        </div>    
-
-        <div class="description-container mb-3">
-            <p class="project-description text-muted mb-0 small line-clamp" id="desc-${project.title.replace(/\s+/g, '')}">
-                ${project.description}
-            </p>
-            <button class="w-100 text-end btn btn-link btn-sm p-0 toggle-desc d-md-none" data-target="desc-${project.title.replace(/\s+/g, '')}">Read more</button>
-        </div>
-
-        <a href="${project.github}" class="btn btn-dark btn-sm" target="_blank">
-                <i class="fab fa-github me-1"></i> View GitHub
-            </a>
-    </div>
-    <hr>
-    <div class="p-1">
-        <div class="mb-3">
-            ${imagesHtml}
-        </div>
-    </div>
-    `;
-
-    container.appendChild(project_card);
-}
-
-document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("toggle-desc")) {
-        const btn = e.target;
-        const descId = btn.dataset.target;
-        const desc = document.getElementById(descId);
-        if (desc.classList.contains("expanded")) {
-            desc.classList.remove("expanded");
-            desc.classList.add("line-clamp");
-            btn.textContent = "Read more";
-        } else {
-            desc.classList.add("expanded");
-            desc.classList.remove("line-clamp");
-            btn.textContent = "Read less";
-        }
-    }
-});
