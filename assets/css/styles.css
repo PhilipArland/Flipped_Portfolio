@@ -81,6 +81,10 @@ body {
     color: var(--text-muted) !important;
 }
 
+.text-back {
+    color: var(--text-dark) !important;
+}
+
 .active,
 .dropdown-menu h6 {
     color: var(--text-dark) !important;
@@ -318,5 +322,19 @@ body {
 
     .stat-card .small {
         font-size: .7rem;
+    }
+
+    .line-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        /* Number of lines to show */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .project-description.expanded {
+        -webkit-line-clamp: unset;
+        display: block;
     }
 }
