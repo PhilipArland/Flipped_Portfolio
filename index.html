@@ -16,102 +16,14 @@
 
 <body class="p-0 p-md-3 px-lg-5">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-card shadow-sm d-md-none mb-3 px-2">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-semibold d-flex" href="#">
-                <img src="assets/img/1.png" alt="Logo" id="logo" class="rounded-circle me-2" width="40" height="40">
-            </a>
+    <nav id="navbar-placeholder" class="navbar navbar-expand-lg bg-card shadow-sm d-md-none mb-3 px-2">
 
-            <div class="nav-item mb-0 list-unstyled">
-                <a class="nav-link d-flex align-items-center p-0" href="#" id="accountDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bars fs-4 nav-toggle-icon"></i>
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-end mx-2 bg-card" aria-labelledby="accountDropdown"
-                    onclick="event.stopPropagation()">
-                    <li class="dropdown-header text-center">
-                        <img src="assets/img/me.png" alt="Profile" class="rounded-circle mb-2" width="40" height="40">
-                        <h6 class="fw-semibold mb-0">Philip Arland Alili</h6>
-                        <p class="text-muted small mb-2">Front-End Developer</p>
-                        <div class="contacts mb-1">
-                            <a href="#"><i class="text-secondary fab fa-facebook"></i></a>
-                            <a href="#"><i class="text-secondary fab fa-github"></i></a>
-                            <a href="#"><i class="text-secondary fab fa-linkedin"></i></a>
-                            <a href="#"><i class="text-secondary fas fa-envelope"></i></a>
-                        </div>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-dark active">
-                            <i class="fas fa-home me-3" style="width: 20px;"></i> Home
-                        </a>
-                        <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-muted">
-                            <i class="fas fa-briefcase me-3" style="width: 20px;"></i> Projects
-                        </a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <div class="p-3 mb-0">
-                            <div
-                                class="gap-2 text-muted small mb-2 bg-subtle p-2 rounded d-flex justify-content-between">
-                                <span><i class="fas fa-moon px-2"></i>Dark Mode</span>
-                                <div class="toggle-switch" onclick="toggleDarkMode(); event.stopPropagation();"></div>
-                            </div>
-                            <div class="text-muted small px-1" style="font-size: 0.75rem;">
-                                <div class="text-center">© 2025 | Designed by Philip Arland Alili</div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </nav>
 
     <div class="container-fluid px-lg-5">
         <div class="row gx-3">
             <div class="col-md-3 d-none d-md-block">
-                <div class="sidebar card rounded-4 border-0 d-flex justify-content-between">
-                    <div class="side-top">
-                        <div class="profile text-center p-4">
-                            <img src="assets/img/me.png" alt="Profile" class="profile-img rounded-circle mb-3">
-                            <h5 class="fw-semibold mb-0">Philip Arland Alili</h5>
-                            <p class="text-muted small mb-2">Front-End Developer</p>
-
-                            <div class="contacts mb-2">
-                                <a href="#"><i class="text-secondary fab fa-facebook"></i></a>
-                                <a href="#"><i class="text-secondary fab fa-github"></i></a>
-                                <a href="#"><i class="text-secondary fab fa-linkedin"></i></a>
-                                <a href="#"><i class="text-secondary fas fa-envelope"></i></a>
-                            </div>
-                            <hr>
-                        </div>
-
-                        <nav class="py-3">
-                            <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-dark active">
-                                <i class="fas fa-home me-3" style="width: 20px;"></i> Home
-                            </a>
-                            <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-muted">
-                                <i class="fas fa-briefcase me-3" style="width: 20px;"></i> Projects
-                            </a>
-                        </nav>
-                    </div>
-
-                    <div class="p-4 mb-0 pb-2">
-                        <div class="gap-2 text-muted small mb-2 bg-subtle p-2 rounded d-flex justify-content-between">
-                            <span><i class="fas fa-moon px-2"></i>Dark Mode</span>
-                            <div class="toggle-switch" onclick="toggleDarkMode()"></div>
-                        </div>
-
-                        <div class="text-muted small px-1" style="font-size: 0.75rem;">
-                            <div class="text-center"> © 2025 | Designed by Philip Arland Alili
-                            </div>
-                        </div>
-                    </div>
+                <div id="sidebar-placeholder" class="sidebar card rounded-4 border-0 d-flex justify-content-between">
                 </div>
             </div>
 
@@ -278,7 +190,7 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
@@ -289,7 +201,6 @@
                                                         class="fab fa-php"></i></span>
                                                 <span class="badge bg-success"><i class="fas fa-database"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -307,7 +218,7 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
@@ -315,7 +226,6 @@
                                                         class="fab fa-js"></i></span>
                                                 <span class="badge bg-secondary"><i class="fab fa-bootstrap"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -333,14 +243,13 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
                                                 <span class="badge bg-warning text-dark"><i
                                                         class="fab fa-js"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -358,12 +267,11 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -380,12 +288,11 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -403,14 +310,13 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
                                                 <span class="badge bg-warning text-dark"><i
                                                         class="fab fa-js"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -428,7 +334,7 @@
                                             </p>
                                         </div>
                                         <div class="tech-stack">
-                                            <div class="mb-3 d-flex flex-wrap gap-2">
+                                            <div class="d-flex flex-wrap gap-2">
                                                 <span class="badge bg-primary"><i class="fab fa-html5"></i></span>
                                                 <span class="badge bg-info text-dark"><i
                                                         class="fab fa-css3-alt"></i></span>
@@ -439,7 +345,6 @@
                                                         class="fab fa-php"></i></span>
                                                 <span class="badge bg-success"><i class="fas fa-database"></i></span>
                                             </div>
-                                            <a href="#" class="w-100 btn btn-sm btn-outline-primary">View Project</a>
                                         </div>
                                     </div>
                                 </div>
@@ -448,10 +353,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
@@ -459,102 +360,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Apply saved theme on load
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-
-        const logo = document.getElementById('logo');
-
-        function toggleDarkMode() {
-            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-            if (isDark) {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-                logo.src = 'assets/img/1.png';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                logo.src = 'assets/img/2.png';
-            }
-        }
-
-        const hero = document.querySelector('.hero');
-        const dragons = document.querySelectorAll('.drag-overlay');
-
-        hero.addEventListener('mousemove', (e) => {
-            const x = (e.clientX / window.innerWidth) * 80;
-            const y = (e.clientY / window.innerHeight) * 80;
-
-            hero.style.setProperty('--mouse-x', `${x}%`);
-            hero.style.setProperty('--mouse-y', `${y}%`);
-
-            const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
-
-            if (isDarkMode) {
-                const mouseX = e.clientX;
-                const mouseY = e.clientY;
-
-                dragons.forEach((dragon) => {
-                    const rect = dragon.getBoundingClientRect();
-                    const dragonCenterX = rect.left + rect.width / 2;
-                    const dragonCenterY = rect.top + rect.height / 2;
-
-                    const distance = Math.hypot(mouseX - dragonCenterX, mouseY - dragonCenterY);
-
-                    if (distance < 150) {
-                        dragon.classList.add('lit');
-                    } else {
-                        dragon.classList.remove('lit');
-                    }
-                });
-            } else {
-                dragons.forEach((dragon) => dragon.classList.remove('lit'));
-            }
-        });
-    </script>
-    <script>
-        new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2
-                },
-                992: {
-                    slidesPerView: 3
-                }
-            }
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

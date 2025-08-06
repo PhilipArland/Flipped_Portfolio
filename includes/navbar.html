@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <a class="navbar-brand fw-semibold d-flex" href="#">
+        <img src="assets/img/1.png" alt="Logo" id="logo" class="rounded-circle me-2" width="40" height="40">
+    </a>
+
+    <div class="nav-item mb-0 list-unstyled">
+        <a class="nav-link d-flex align-items-center p-0" href="#" id="accountDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-bars fs-4 nav-toggle-icon"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end mx-2 bg-card" aria-labelledby="accountDropdown"
+            onclick="event.stopPropagation()">
+            <li class="dropdown-header text-center">
+                <img src="assets/img/me.png" alt="Profile" class="rounded-circle mb-2" width="40" height="40">
+                <h6 class="fw-semibold mb-0">Philip Arland Alili</h6>
+                <p class="text-muted small mb-2">Front-End Developer</p>
+                <div class="contacts mb-1">
+                    <a href="#"><i class="text-secondary fab fa-facebook"></i></a>
+                    <a href="#"><i class="text-secondary fab fa-github"></i></a>
+                    <a href="#"><i class="text-secondary fab fa-linkedin"></i></a>
+                    <a href="#"><i class="text-secondary fas fa-envelope"></i></a>
+                </div>
+            </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li>
+                <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-dark active">
+                    <i class="fas fa-home me-3" style="width: 20px;"></i> Home
+                </a>
+                <a href="#" class="nav-item d-block px-3 py-2 text-decoration-none text-muted">
+                    <i class="fas fa-briefcase me-3" style="width: 20px;"></i> Projects
+                </a>
+            </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li>
+                <div class="p-3 mb-0">
+                    <div class="gap-2 text-muted small mb-2 bg-subtle p-2 rounded d-flex justify-content-between">
+                        <span><i class="fas fa-moon px-2"></i>Dark Mode</span>
+                        <div class="toggle-switch" onclick="toggleDarkMode(); event.stopPropagation();"></div>
+                    </div>
+                    <div class="text-muted small px-1" style="font-size: 0.75rem;">
+                        <div class="text-center">© 2025 | Designed by Philip Arland Alili</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
