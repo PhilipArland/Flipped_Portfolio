@@ -206,11 +206,10 @@ function generateFeaturedProjectsHTML() {
 }
 
 
-
-
 const projectsData = {
     shoewave: {
-        title: "E-Commerce Platform - ShoeWave",
+        logo: "assets/img/shoewave/logo.png",
+        title: "ShoeWave",
         description: "<a href='https://shoewave.vercel.app' class='text-decoration-none text-info'>ShoeWave </a> is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
         images: [
             "assets/img/shoewave/shoewave.png",
@@ -221,7 +220,8 @@ const projectsData = {
     },
 
     sheenas: {
-        title: "Pension House Website - Sheenas",
+        logo: "assets/img/sheenas/logo.png",
+        title: "Pension House - Sheenas",
         description: "<a href='https://sheenas.vercel.app' class='text-decoration-none text-info'>Sheenas</a> is a static website built to showcase a local pension house. It presents available rooms, food menu, and tour package prices in a clean and organized layout. Designed with HTML, CSS, JavaScript, and Bootstrap, the site is responsive and easy to navigate, offering visitors a simple way to explore the offerings of the establishment.",
         images: [
             "assets/img/sheenas/sheenas_cut.png",
@@ -236,11 +236,11 @@ const projectsData = {
 
 function displayProject(projectId) {
     const project = projectsData[projectId];
-    const container = document.getElementById("project-list");
+    const container = document.getElementById("featured_projects-placeholder");
     container.innerHTML = ''; // Clear any existing content
 
-    const card = document.createElement("div");
-    card.className = "card border-0 rounded-4 shadow-sm h-100 overflow-hidden p-2 p-md-3";
+    const project_card = document.createElement("div");
+    project_card.className = "project_card";
 
     // Add images
     const imagesHtml = project.images.map(src =>
@@ -248,15 +248,17 @@ function displayProject(projectId) {
     ).join("");
 
 
-    card.innerHTML = `
+    project_card.innerHTML = `
     <div class="p-0">
         <div class="mb-3">
             <a href="projects.html" class="text-back">
                 <i class="fas fa-arrow-left me-1"></i></a>
         </div>
 
-    
-        <h4 class="fw-bold">${project.title}</h4>
+        <div class="title d-flex">
+            <img src="${project.logo}" alt="${project.title} Logo" class="img-fluid mb-2 me-1 rounded-circle" heigth="25" width="25">
+            <h4 class="fw-bold lead">${project.title}</h4>
+        </div>    
 
         <div class="description-container mb-3">
             <p class="project-description text-muted mb-0 small line-clamp" id="desc-${project.title.replace(/\s+/g, '')}">
@@ -277,7 +279,7 @@ function displayProject(projectId) {
     </div>
     `;
 
-    container.appendChild(card);
+    container.appendChild(project_card);
 }
 
 document.addEventListener("click", function (e) {

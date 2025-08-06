@@ -1,6 +1,3 @@
-// =====================
-// 🌙 Dark Mode Handling
-// =====================
 if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
 }
@@ -20,9 +17,6 @@ function toggleDarkMode() {
     }
 }
 
-// =====================
-// 🐉 Hero Interaction (Safe)
-// =====================
 const hero = document.querySelector('.hero');
 const dragons = document.querySelectorAll('.drag-overlay');
 
