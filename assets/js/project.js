@@ -170,7 +170,7 @@ function generateFeaturedProjectsHTML() {
                 <div class="swiper-button-next position-static"></div>
             </div>
         </div>
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper m-0 p-0">
             <div class="swiper-wrapper">
     `;
 
@@ -244,7 +244,7 @@ function displayProject(projectId) {
 
     // Add images
     const imagesHtml = project.images.map(src =>
-        `<img src="${src}" class="img-fluid rounded-4 mb-3" alt="${project.title}">`
+        `<img src="${src}" class="img-fluid rounded-4 mb-3 h-100" alt="${project.title}">`
     ).join("");
 
 
@@ -255,8 +255,8 @@ function displayProject(projectId) {
                 <i class="fas fa-arrow-left me-1"></i></a>
         </div>
 
-        <div class="title d-flex">
-            <img src="${project.logo}" alt="${project.title} Logo" class="img-fluid mb-2 me-1 rounded-circle" heigth="25" width="25">
+        <div class="project-title d-flex">
+            <img src="${project.logo}" alt="${project.title} Logo" class="img-fluid mb-2 me-1 rounded-circle">
             <h4 class="fw-bold lead">${project.title}</h4>
         </div>    
 
@@ -273,7 +273,7 @@ function displayProject(projectId) {
     </div>
     <hr>
     <div class="p-1">
-        <div class="mb-3">
+        <div class="mb-3 d-flex flex-column">
             ${imagesHtml}
         </div>
     </div>

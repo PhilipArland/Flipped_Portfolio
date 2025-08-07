@@ -135,6 +135,12 @@ body {
     display: flex;
 }
 
+.swiper-slide img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
     background-color: var(--bg-stat-card);
@@ -149,6 +155,10 @@ body {
     /* make arrow icon smaller */
 }
 
+.project-title img {
+    height: auto;
+    width: 25px;
+}
 
 
 
