@@ -159,19 +159,21 @@ function getTechBadge(icon) {
 }
 
 function generateFeaturedProjectsHTML() {
+    // --- Swiper for large screens ---
     let html = `
-        <div class="project-header d-flex justify-content-between align-items-center mb-4">
-            <h5 class="d-flex align-items-center gap-2 fw-semibold mb-0">
-                <i class="fas fa-folder text-purple"></i>
-                Featured Projects
-            </h5>
-            <div class="d-flex align-items-center gap-3 mt-3 mx-2">
-                <div class="swiper-button-prev position-static"></div>
-                <div class="swiper-button-next position-static"></div>
+        <div class="d-none d-lg-block p-3 p-md-4">
+            <div class="project-header d-flex justify-content-between align-items-center mb-4">
+                <h5 class="d-flex align-items-center gap-2 fw-semibold mb-0">
+                    <i class="fas fa-folder text-purple"></i>
+                    Featured Projects
+                </h5>
+                <div class="d-flex align-items-center gap-3 mt-3 mx-2">
+                    <div class="swiper-button-prev position-static"></div>
+                    <div class="swiper-button-next position-static"></div>
+                </div>
             </div>
-        </div>
-        <div class="swiper mySwiper m-0 p-0">
-            <div class="swiper-wrapper">
+            <div class="swiper mySwiper m-0 p-0">
+                <div class="swiper-wrapper">
     `;
 
     featuredProjects.forEach(project => {
@@ -201,9 +203,47 @@ function generateFeaturedProjectsHTML() {
         `;
     });
 
-    html += `</div></div>`;
+    html += `</div></div></div>`; // Close Swiper + container
+
+    // --- Static layout for small/medium screens ---
+    html += `<div class="d-block d-lg-none p-3 p-md-4">
+        <div class="project-header d-flex justify-content-between align-items-center mb-4">
+            <h5 class="d-flex align-items-center gap-2 fw-semibold mb-0">
+                <i class="fas fa-folder text-purple"></i>
+                Featured Projects
+            </h5>
+        </div>`;
+
+    featuredProjects.forEach(project => {
+        html += `
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden mb-3">
+                <img src="${project.image}" alt="${project.title}" class="card-img-top">
+                <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="details mb-3">
+                        <h6 class="fw-bold mb-2">${project.title}</h6>
+                        <p class="text-muted small">${project.description}</p>
+                    </div>
+                    <div class="tech-stack">
+                        <div class="d-flex flex-wrap gap-2">
+                            ${project.tech.map(getTechBadge).join('')}
+                        </div>
+                    </div>
+                    ${project.link ? `
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <a href="${project.link}" class="w-100 btn btn-outline-primary btn-sm">
+                            <i class="fas fa-eye me-1"></i> View Project
+                        </a>
+                    </div>` : ''}
+                </div>
+            </div>
+        `;
+    });
+
+    html += `</div>`; // Close small screen container
+
     return html;
 }
+
 
 
 const projectsData = {
