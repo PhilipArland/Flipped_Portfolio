@@ -1,6 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    loadHTML("sidebar-placeholder", "includes/sidebar.html", setActiveNavLinks);
-    loadHTML("navbar-placeholder", "includes/navbar.html");
+    let sidebarLoaded = false;
+    let navbarLoaded = false;
+
+    function checkAndSetActive() {
+        if (sidebarLoaded && navbarLoaded) {
+            setActiveNavLinks();
+        }
+    }
+
+    loadHTML("sidebar-placeholder", "includes/sidebar.html", () => {
+        sidebarLoaded = true;
+        checkAndSetActive();
+    });
+
+    loadHTML("navbar-placeholder", "includes/navbar.html", () => {
+        navbarLoaded = true;
+        checkAndSetActive();
+    });
 
     // Inject featured projects (safer here)
     const featuredPlaceholder = document.getElementById("featured_projects-placeholder");
@@ -49,16 +65,20 @@ function loadHTML(id, file, callback) {
 }
 
 function setActiveNavLinks() {
-    const currentPath = window.location.pathname;
-
-    const links = document.querySelectorAll('#sidebar-placeholder a');
-    if (!links.length) return;
+    const currentPath = window.location.pathname.replace(/\/+$/, '');
+    const links = document.querySelectorAll('a[href$=".html"]');
 
     links.forEach(link => {
         const href = link.getAttribute('href');
-        const linkURL = new URL(href, window.location.origin);
+        if (!href) return;
 
-        if (currentPath.endsWith(linkURL.pathname)) {
+        const linkPath = new URL(href, window.location.origin).pathname.replace(/\/+$/, '');
+
+        // Special case: Treat / and /index.html as equal
+        const isHomePage = (currentPath === '/' || currentPath === '/index.html') &&
+            (linkPath === '/' || linkPath === '/index.html');
+
+        if (currentPath === linkPath || isHomePage) {
             link.classList.add('active', 'text-dark');
             link.classList.remove('text-muted');
         } else {
@@ -67,6 +87,9 @@ function setActiveNavLinks() {
         }
     });
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     loadHTML("sidebar-placeholder", "includes/sidebar.html", setActiveNavLinks);
@@ -323,8 +346,8 @@ function displayProject(projectId) {
             <i class="fab fa-github me-1"></i> View GitHub
         </a>
     </div>
-    <hr>
-    <div class="p-1">
+
+    <div class="p-1 mt-3">
         <div class="mb-3 d-flex flex-column">
             ${imagesHtml}
         </div>
