@@ -308,6 +308,10 @@ body {
 }
 
 @media (max-width: 640px) {
+    html, body {
+        overflow-x: hidden;
+    }
+
     .hero {
         height: 200px;
         text-align: center;

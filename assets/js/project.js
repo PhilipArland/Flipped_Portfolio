@@ -77,8 +77,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (projectId && projectsData[projectId]) {
         displayProject(projectId);
+
+        // Hide GitHub Contributions section
+        const githubSection = document.getElementById("github-contributions");
+        if (githubSection) {
+            githubSection.style.display = "none";
+        }
     }
 });
+
 
 const featuredProjects = [
     {
@@ -250,19 +257,20 @@ const projectsData = {
     shoewave: {
         logo: "assets/img/shoewave/logo.png",
         title: "ShoeWave",
-        description: "<a href='https://shoewave.vercel.app' class='text-decoration-none text-info'>ShoeWave </a> is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
+        description: "ShoeWave is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
         images: [
             "assets/img/shoewave/shoewave.png",
             "assets/img/shoewave/shoewave1.png",
             "assets/img/shoewave/shoewave2.png"
         ],
         github: "https://github.com/PhilipArland/shoewave",
+        live: "https://shoewave.vercel.app",
     },
 
     sheenas: {
         logo: "assets/img/sheenas/logo.png",
         title: "Pension House - Sheenas",
-        description: "<a href='https://sheenas.vercel.app' class='text-decoration-none text-info'>Sheenas</a> is a static website built to showcase a local pension house. It presents available rooms, food menu, and tour package prices in a clean and organized layout. Designed with HTML, CSS, JavaScript, and Bootstrap, the site is responsive and easy to navigate, offering visitors a simple way to explore the offerings of the establishment.",
+        description: "Sheenas is a static website built to showcase a local pension house. It presents available rooms, food menu, and tour package prices in a clean and organized layout. Designed with HTML, CSS, JavaScript, and Bootstrap, the site is responsive and easy to navigate, offering visitors a simple way to explore the offerings of the establishment.",
         images: [
             "assets/img/sheenas/sheenas_cut.png",
             "assets/img/sheenas/sheenas1.png",
@@ -271,6 +279,7 @@ const projectsData = {
             "assets/img/sheenas/sheenas4.png",
         ],
         github: "https://github.com/PhilipArland/sheenas",
+        live: "https://sheenas.vercel.app",
     },
 };
 
@@ -280,7 +289,7 @@ function displayProject(projectId) {
     container.innerHTML = ''; // Clear any existing content
 
     const project_card = document.createElement("div");
-    project_card.className = "project_card";
+    project_card.className = "project_card p-3 p-md-4 pb-0 mb-0";
 
     // Add images
     const imagesHtml = project.images.map(src =>
@@ -307,9 +316,12 @@ function displayProject(projectId) {
             <button class="w-100 text-end btn btn-link btn-sm p-0 toggle-desc d-md-none" data-target="desc-${project.title.replace(/\s+/g, '')}">Read more</button>
         </div>
 
+        <a href="${project.live}" class="btn btn-primary btn-sm" target="_blank">
+            <i class="fas fa-eye me-1"></i> View Live
+        </a>
         <a href="${project.github}" class="btn btn-dark btn-sm" target="_blank">
-                <i class="fab fa-github me-1"></i> View GitHub
-            </a>
+            <i class="fab fa-github me-1"></i> View GitHub
+        </a>
     </div>
     <hr>
     <div class="p-1">
