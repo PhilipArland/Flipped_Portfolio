@@ -44,21 +44,21 @@ const featuredProjects = [
     {
         title: "Portfolio V2",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
-        image: "assets/img/projects/portfolio2.png",
+        image: "assets/img/projects/portfolio/portfoliov2.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v2"
     },
     {
         title: "Portfolio V1",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
-        image: "assets/img/projects/old.png",
+        image: "assets/img/projects/portfolio/portfoliov1.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v1"
     },
     {
         title: "Health Office Dashboard",
         description: "A responsive web dashboard for managing and visualizing health office data.",
-        image: "assets/img/projects/pho.png",
+        image: "assets/img/projects/pho/admin_dashboard.png",
         tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
         link: "projects.html?project=pho_dashboard"
     }
