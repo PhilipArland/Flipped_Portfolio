@@ -1,115 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let sidebarLoaded = false;
-    let navbarLoaded = false;
-
-    function checkAndSetActive() {
-        if (sidebarLoaded && navbarLoaded) {
-            setActiveNavLinks();
-        }
-    }
-
-    loadHTML("sidebar-placeholder", "includes/sidebar.html", () => {
-        sidebarLoaded = true;
-        checkAndSetActive();
-    });
-
-    loadHTML("navbar-placeholder", "includes/navbar.html", () => {
-        navbarLoaded = true;
-        checkAndSetActive();
-    });
-
-    // Inject featured projects (safer here)
-    const featuredPlaceholder = document.getElementById("featured_projects-placeholder");
-    if (featuredPlaceholder) {
-        featuredPlaceholder.innerHTML = generateFeaturedProjectsHTML();
-
-        new Swiper(".mySwiper", {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 20,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                768: { slidesPerView: 2 },
-                992: { slidesPerView: 3 },
-            },
-        });
-    }
-
-    const params = new URLSearchParams(window.location.search);
-    const projectId = params.get("project");
-
-    if (projectId && projectsData[projectId]) {
-        displayProject(projectId);
-    }
-});
-
-function loadHTML(id, file, callback) {
-    fetch(file)
-        .then(response => {
-            if (!response.ok) throw new Error(`Failed to load ${file}`);
-            return response.text();
-        })
-        .then(data => {
-            const element = document.getElementById(id);
-            if (element) {
-                element.innerHTML = data;
-                if (typeof callback === 'function') callback();
-            }
-        })
-        .catch(error => {
-            console.error(`Error loading ${file}:`, error);
-        });
-}
-
-function setActiveNavLinks() {
-    const currentPath = window.location.pathname.replace(/\/+$/, '');
-    const links = document.querySelectorAll('a[href$=".html"]');
-
-    links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href) return;
-
-        const linkPath = new URL(href, window.location.origin).pathname.replace(/\/+$/, '');
-
-        // Special case: Treat / and /index.html as equal
-        const isHomePage = (currentPath === '/' || currentPath === '/index.html') &&
-            (linkPath === '/' || linkPath === '/index.html');
-
-        if (currentPath === linkPath || isHomePage) {
-            link.classList.add('active', 'text-dark');
-            link.classList.remove('text-muted');
-        } else {
-            link.classList.remove('active', 'text-dark');
-            link.classList.add('text-muted');
-        }
-    });
-}
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    loadHTML("sidebar-placeholder", "includes/sidebar.html", setActiveNavLinks);
-    loadHTML("navbar-placeholder", "includes/navbar.html");
-
-    const params = new URLSearchParams(window.location.search);
-    const projectId = params.get("project");
-
-    if (projectId && projectsData[projectId]) {
-        displayProject(projectId);
-
-        // Hide GitHub Contributions section
-        const githubSection = document.getElementById("github-contributions");
-        if (githubSection) {
-            githubSection.style.display = "none";
-        }
-    }
-});
-
-
 const featuredProjects = [
     {
         title: "E-Commerce Platform",
@@ -308,15 +196,14 @@ const projectsData = {
     quiz_game: {
         logo: "assets/img/quiz/logo.png",
         title: "Simple Interactive Quiz Game",
-        description: "A fun little math quiz game I made for kids to practice addition and subtraction in a playful way. It’s simple, colorful, and easy to use — perfect for learning while having fun. I built it with HTML, CSS, and JavaScript, and added friendly visuals to keep things cheerful and engaging.",
+        description: "This is a simple interactive math quiz game focused on basic addition and subtraction. It was built using HTML, CSS, and JavaScript, providing an engaging way to practice math skills through a user-friendly interface.",
         images: [
             "assets/img/quiz/quiz.png",
             "assets/img/quiz/quiz1.png",
-            "assets/img/quiz/quiz2.png",
-            "assets/img/quiz/quiz3.png",
+            "assets/img/quiz/quiz2.png"
         ],
-        github: "https://github.com/PhilipArland/simple_interactive_quiz",
-        live: "https://flip-simple-quiz.vercel.app",}
+        github: "https://github.com/PhilipArland/sheenas",
+        live: "https://flipquiz-game.vercel.app",}
 };
 
 function displayProject(projectId) {
@@ -369,20 +256,3 @@ function displayProject(projectId) {
 
     container.appendChild(project_card);
 }
-
-document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("toggle-desc")) {
-        const btn = e.target;
-        const descId = btn.dataset.target;
-        const desc = document.getElementById(descId);
-        if (desc.classList.contains("expanded")) {
-            desc.classList.remove("expanded");
-            desc.classList.add("line-clamp");
-            btn.textContent = "Read more";
-        } else {
-            desc.classList.add("expanded");
-            desc.classList.remove("line-clamp");
-            btn.textContent = "Read less";
-        }
-    }
-});
