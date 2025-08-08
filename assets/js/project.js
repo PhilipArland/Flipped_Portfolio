@@ -128,7 +128,7 @@ const featuredProjects = [
     {
         title: "Interactive Quiz Game",
         description: "A simple interactive math quiz focused on basic addition and subtraction.",
-        image: "assets/img/quiz.png",
+        image: "assets/img/quiz/quiz.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=quiz_game"
     },
@@ -154,9 +154,9 @@ const featuredProjects = [
         link: "projects.html?project=portfolio_v1"
     },
     {
-        title: "Portfolio V1",
+        title: "Portfolio V2",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
-        image: "assets/img/old.png",
+        image: "assets/img/portfolio2.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v2"
     },
@@ -217,7 +217,7 @@ function generateFeaturedProjectsHTML() {
                             <p class="text-muted small">${project.description}</p>
                         </div>
                         <div class="tech-stack">
-                            <div class="d-flex flex-wrap gap-2">
+                            <div class="d-flex flex-wrap gap-1">
                                 ${project.tech.map(getTechBadge).join('')}
                             </div>
                         </div>
@@ -304,6 +304,19 @@ const projectsData = {
         github: "https://github.com/PhilipArland/sheenas",
         live: "https://sheenas.vercel.app",
     },
+
+    quiz_game: {
+        logo: "assets/img/quiz/logo.png",
+        title: "Simple Interactive Quiz Game",
+        description: "A fun little math quiz game I made for kids to practice addition and subtraction in a playful way. It’s simple, colorful, and easy to use — perfect for learning while having fun. I built it with HTML, CSS, and JavaScript, and added friendly visuals to keep things cheerful and engaging.",
+        images: [
+            "assets/img/quiz/quiz.png",
+            "assets/img/quiz/quiz1.png",
+            "assets/img/quiz/quiz2.png",
+            "assets/img/quiz/quiz3.png",
+        ],
+        github: "https://github.com/PhilipArland/simple_interactive_quiz",
+        live: "https://flip-simple-quiz.vercel.app",}
 };
 
 function displayProject(projectId) {
