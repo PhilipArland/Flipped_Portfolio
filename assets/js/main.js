@@ -87,16 +87,18 @@ function loadHTML(id, file, callback) {
 }
 
 function setActiveNavLinks() {
-    const currentPath = window.location.pathname.replace(/\/+$/, '');
+    let currentPath = window.location.pathname.replace(/\/+$/, '');
+    if (currentPath === '') currentPath = '/'; // treat empty as root
+
     const links = document.querySelectorAll('a[href$=".html"]');
 
     links.forEach(link => {
         const href = link.getAttribute('href');
         if (!href) return;
 
-        const linkPath = new URL(href, window.location.origin).pathname.replace(/\/+$/, '');
+        let linkPath = new URL(href, window.location.origin).pathname.replace(/\/+$/, '');
+        if (linkPath === '') linkPath = '/';
 
-        // Treat /, /index.html, and tryIndex.html as equal for home
         const isHomePage =
             (currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('tryIndex.html')) &&
             (linkPath === '/' || linkPath === '/index.html' || linkPath.endsWith('tryIndex.html'));
@@ -110,6 +112,7 @@ function setActiveNavLinks() {
         }
     });
 }
+
 
 const hero = document.querySelector('.hero');
 const dragons = document.querySelectorAll('.drag-overlay');

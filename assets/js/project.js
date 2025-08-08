@@ -2,63 +2,63 @@ const featuredProjects = [
     {
         title: "E-Commerce Platform",
         description: "A modern e-commerce website for sneakers featuring clean, responsive design.",
-        image: "assets/img/shoewave/shoewave.png",
+        image: "assets/img/projects/shoewave/shoewave-thumbnail.png",
         tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
         link: "projects.html?project=shoewave"
     },
     {
         title: "Pension House Website",
         description: "A clean, static site showcasing rooms, tour packages, and key guest info.",
-        image: "assets/img/sheenas/sheenas_cut.png",
+        image: "assets/img/projects/sheenas/sheenas-thumbnail.png",
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=sheenas"
     },
     {
-        title: "Current Portfolio",
-        description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
-        image: "assets/img/portfolio/portfolio.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap"],
-        link: "projects.html?project=portfolio"
-    },
-    {
         title: "Interactive Quiz Game",
         description: "A simple interactive math quiz focused on basic addition and subtraction.",
-        image: "assets/img/quiz/quiz.png",
+        image: "assets/img/projects/quiz/quiz.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=quiz_game"
     },
     {
-        title: "Spy x Family Themed Page",
-        description: "A simple themed webpage inspired by Spy x Family. Designed only with HTML and CSS.",
-        image: "assets/img/anya.png",
-        tech: ["html5", "css3-alt"],
-        link: "projects.html?project=spyxfam"
-    },
-    {
         title: "Haikyuu!! Fan Page",
         description: "A fan-made webpage dedicated to Haikyuu!! Built with HTML and CSS.",
-        image: "assets/img/haikyuu.png",
+        image: "assets/img/projects/haikyuu/haikyuu-thumbnail.png",
         tech: ["html5", "css3-alt"],
         link: "projects.html?project=haikyuu"
     },
     {
-        title: "Portfolio V1",
-        description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
-        image: "assets/img/old.png",
-        tech: ["html5", "css3-alt", "js"],
-        link: "projects.html?project=portfolio_v1"
+        title: "Spy x Family Themed Page",
+        description: "A simple themed webpage inspired by Spy x Family. Designed only with HTML and CSS.",
+        image: "assets/img/projects/spyxfam/anya.png",
+        tech: ["html5", "css3-alt"],
+        link: "projects.html?project=spyxfam"
+    },
+    {
+        title: "Current Portfolio",
+        description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
+        image: "assets/img/projects/portfolio/portfolio.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=portfolio"
     },
     {
         title: "Portfolio V2",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
-        image: "assets/img/portfolio2.png",
+        image: "assets/img/projects/portfolio2.png",
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v2"
     },
     {
+        title: "Portfolio V1",
+        description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
+        image: "assets/img/projects/old.png",
+        tech: ["html5", "css3-alt", "js"],
+        link: "projects.html?project=portfolio_v1"
+    },
+    {
         title: "Health Office Dashboard",
         description: "A responsive web dashboard for managing and visualizing health office data.",
-        image: "assets/img/pho.png",
+        image: "assets/img/projects/pho.png",
         tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
         link: "projects.html?project=pho_dashboard"
     }
@@ -173,57 +173,75 @@ function generateFeaturedProjectsHTML() {
 
 const projectsData = {
     shoewave: {
-        logo: "assets/img/shoewave/logo.png",
+        logo: "assets/img/projects/shoewave/logo.png",
         title: "ShoeWave",
         description: "ShoeWave is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
         images: [
-            "assets/img/shoewave/shoewave.png",
-            "assets/img/shoewave/shoewave1.png",
-            "assets/img/shoewave/shoewave2.png"
+            "assets/img/projects/shoewave/shoewave.png",
+            "assets/img/projects/shoewave/shoewave1.png",
+            "assets/img/projects/shoewave/shoewave2.png",
+            "assets/img/projects/shoewave/shoewave3.png",
         ],
         github: "https://github.com/PhilipArland/shoewave",
         live: "https://shoewave.vercel.app",
     },
 
     sheenas: {
-        logo: "assets/img/sheenas/logo.png",
+        logo: "assets/img/projects/sheenas/logo.png",
         title: "Pension House - Sheenas",
         description: "Sheenas is a static website built to showcase a local pension house. It presents available rooms, food menu, and tour package prices in a clean and organized layout. Designed with HTML, CSS, JavaScript, and Bootstrap, the site is responsive and easy to navigate, offering visitors a simple way to explore the offerings of the establishment.",
         images: [
-            "assets/img/sheenas/sheenas_cut.png",
-            "assets/img/sheenas/sheenas1.png",
-            "assets/img/sheenas/sheenas2.png",
-            "assets/img/sheenas/sheenas3.png",
-            "assets/img/sheenas/sheenas4.png",
+            "assets/img/projects/sheenas/sheenas.png",
+            "assets/img/projects/sheenas/sheenas1.png",
+            "assets/img/projects/sheenas/sheenas2.png",
+            "assets/img/projects/sheenas/sheenas3.png",
+            "assets/img/projects/sheenas/sheenas4.png",
+            "assets/img/projects/sheenas/sheenas5.png",
+            "assets/img/projects/sheenas/sheenas6.png"
         ],
         github: "https://github.com/PhilipArland/sheenas",
         live: "https://sheenas.vercel.app",
     },
 
+    haikyuu: {
+        logo: "assets/img/projects/haikyuu/logo.png",
+        title: "Haikyuu!! Fan Page",
+        description: "A responsive fan-made webpage dedicated to the anime Haikyuu!!, built in 2024 using only HTML and CSS. Features character showcases and thematic design for an engaging fan experience.",
+        images: [
+            "assets/img/projects/haikyuu/haikyuu.png",
+            "assets/img/projects/haikyuu/haikyuu1.png",
+            "assets/img/projects/haikyuu/haikyuu2.png",
+            "assets/img/projects/haikyuu/haikyuu3.png"
+        ],
+        github: "https://github.com/PhilipArland/haikyuu",
+        live: "https://flip-haikyuu.vercel.app",
+    },
+
+    quiz_game: {
+        logo: "assets/img/projects/quiz/logo.png",
+        title: "Simple Interactive Quiz Game",
+        description: "This is a simple interactive math quiz game focused on basic addition and subtraction. It was built using HTML, CSS, and JavaScript, providing an engaging way to practice math skills through a user-friendly interface.",
+        images: [
+            "assets/img/projects/quiz/quiz.png",
+            "assets/img/projects/quiz/quiz1.png",
+            "assets/img/projects/quiz/quiz2.png"
+        ],
+        github: "https://github.com/PhilipArland/simple_interactive_quiz",
+        live: "https://flip-simple-quiz.vercel.app",
+    },
+
     portfolio: {
-        logo: "assets/img/portfolio/logo.png",
+        logo: "assets/img/projects/portfolio/logo.png",
         title: "My Portfolio",
         description: "This is my personal portfolio website, built to showcase my projects and skills. It features a clean, responsive design using HTML, CSS, and JavaScript, with a focus on user experience and accessibility.",
         images: [
-            "assets/img/portfolio/portfolio.png",
-            "assets/img/portfolio/portfolio1.png",
-            "assets/img/portfolio/portfolio2.png",
+            "assets/img/projects/portfolio/portfolio.png",
+            "assets/img/projects/portfolio/portfolio1.png",
+            "assets/img/projects/portfolio/portfolio2.png",
         ],
         github: "https://github.com/PhilipArland/Flipped_Portfolio",
         live: "https://flipped-portfolio.vercel.app",
     },
-
-    quiz_game: {
-        logo: "assets/img/quiz/logo.png",
-        title: "Simple Interactive Quiz Game",
-        description: "This is a simple interactive math quiz game focused on basic addition and subtraction. It was built using HTML, CSS, and JavaScript, providing an engaging way to practice math skills through a user-friendly interface.",
-        images: [
-            "assets/img/quiz/quiz.png",
-            "assets/img/quiz/quiz1.png",
-            "assets/img/quiz/quiz2.png"
-        ],
-        github: "https://github.com/PhilipArland/sheenas",
-        live: "https://flipquiz-game.vercel.app",}
 };
 
 function displayProject(projectId) {
@@ -235,10 +253,12 @@ function displayProject(projectId) {
     project_card.className = "project_card p-3 p-md-4 pb-0 mb-0";
 
     // Add images
-    const imagesHtml = project.images.map(src =>
-        `<img src="${src}" class="img-fluid rounded-4 mb-3 h-100" alt="${project.title}">`
-    ).join("");
-
+    const imagesHtml = project.images
+        .map((src, index) => {
+            const isLast = index === project.images.length - 1;
+            return `<img src="${src}" class="img-fluid rounded-4 h-100 ${isLast ? 'mb-0' : 'mb-3'}" alt="${project.title}">`;
+        })
+        .join("");
 
     project_card.innerHTML = `
     <div class="p-0">
