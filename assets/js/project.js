@@ -14,6 +14,13 @@ const featuredProjects = [
         link: "projects.html?project=sheenas"
     },
     {
+        title: "Current Portfolio",
+        description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
+        image: "assets/img/portfolio/portfolio.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=portfolio"
+    },
+    {
         title: "Interactive Quiz Game",
         description: "A simple interactive math quiz focused on basic addition and subtraction.",
         image: "assets/img/quiz/quiz.png",
@@ -191,6 +198,19 @@ const projectsData = {
         ],
         github: "https://github.com/PhilipArland/sheenas",
         live: "https://sheenas.vercel.app",
+    },
+
+    portfolio: {
+        logo: "assets/img/portfolio/logo.png",
+        title: "My Portfolio",
+        description: "This is my personal portfolio website, built to showcase my projects and skills. It features a clean, responsive design using HTML, CSS, and JavaScript, with a focus on user experience and accessibility.",
+        images: [
+            "assets/img/portfolio/portfolio.png",
+            "assets/img/portfolio/portfolio1.png",
+            "assets/img/portfolio/portfolio2.png",
+        ],
+        github: "https://github.com/PhilipArland/Flipped_Portfolio",
+        live: "https://flipped-portfolio.vercel.app",
     },
 
     quiz_game: {
