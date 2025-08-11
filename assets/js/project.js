@@ -27,13 +27,13 @@ const featuredProjects = [
         tech: ["html5", "css3-alt"],
         link: "projects.html?project=haikyuu"
     },
-    {
-        title: "Spy x Family Themed Page",
-        description: "A simple themed webpage inspired by Spy x Family. Designed only with HTML and CSS.",
-        image: "assets/img/projects/spyxfam/anya.png",
-        tech: ["html5", "css3-alt"],
-        link: "projects.html?project=spyxfam"
-    },
+    // {
+    //     title: "Spy x Family Themed Page",
+    //     description: "A simple themed webpage inspired by Spy x Family. Designed only with HTML and CSS.",
+    //     image: "assets/img/projects/spyxfam/anya.png",
+    //     tech: ["html5", "css3-alt"],
+    //     link: "projects.html?project=spyxfam"
+    // },
     {
         title: "Current Portfolio",
         description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
@@ -241,6 +241,35 @@ const projectsData = {
         ],
         github: "https://github.com/PhilipArland/Flipped_Portfolio",
         live: "https://flipped-portfolio.vercel.app",
+    },
+
+    portfolio_v2: {
+        logo: "assets/img/projects/portfolio/logo.png",
+        title: "Portfolio V2",
+        description: "This is a previous version of my personal portfolio website, showcasing my projects and skills. It was built using basic HTML, CSS, and JavaScript, focusing on simplicity and clarity in design.",
+        images: [
+            "assets/img/projects/portfolio/portfoliov2.png",
+            "assets/img/projects/portfolio/portfoliov21.png",
+            "assets/img/projects/portfolio/portfoliov22.png",
+            "assets/img/projects/portfolio/portfoliov23.png",
+        ],
+        github: "",
+        live: "https://flip-portfolio.vercel.app/",
+    },
+
+    portfolio_v1: {
+        logo: "assets/img/projects/portfolio/logo.png",
+        title: "Portfolio V1",
+        description: "This is a previous version of my personal portfolio website, built using basic HTML, CSS, and JavaScript. It showcases my projects and skills in a straightforward layout.",
+        images: [
+            "assets/img/projects/portfolio/portfoliov1.png",
+            "assets/img/projects/portfolio/portfoliov11.png",
+            "assets/img/projects/portfolio/portfoliov12.png",
+            "assets/img/projects/portfolio/portfoliov13.png",
+            "assets/img/projects/portfolio/portfoliov14.png",
+        ],
+        github: "",
+        live: "https://flipxs.vercel.app/",
     },
 };
 
