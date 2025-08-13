@@ -81,7 +81,7 @@ body {
     color: var(--text-muted) !important;
 }
 
-.text-back {
+.text-black {
     color: var(--text-dark) !important;
 }
 
@@ -160,14 +160,21 @@ body {
     width: 25px;
 }
 
-
 .git-legend {
     width: 16px;
     height: 16px;
     border-radius: 3px;
 }
 
+.github-contributions .nav-link.active {
+    color: var(--text-dark) !important;
+    background-color: var(--bg-stat-card) !important;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
 
+.github-contributions .nav-link {
+    color: #4dabf7 !important;
+}
 
 
 
