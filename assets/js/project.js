@@ -211,7 +211,7 @@ const projectsData = {
     },
 
     typing_game: {
-        logo: "assets/img/projects/justtype/logo.png",
+        logo: "assets/img/projects/justtype/jt-logo.png",
         title: "JustType",
         description: "JustType is a clean and simple typing game clone inspired by Monkeytype, designed to help users practice and improve their typing speed and accuracy. Built with HTML, CSS, and JavaScript, it offers a user-friendly interface where players can test their skills in a fun and engaging way.",
         images: [
