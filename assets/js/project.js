@@ -219,7 +219,6 @@ const projectsData = {
             "assets/img/projects/justtype/justtype1.png",
             "assets/img/projects/justtype/justtype2.png",
             "assets/img/projects/justtype/justtype3.png",
-            "assets/img/projects/justtype/justtype4.png",
         ],
         github: "https://github.com/PhilipArland/justType",
         live: "https://flip-just-type.vercel.app",
