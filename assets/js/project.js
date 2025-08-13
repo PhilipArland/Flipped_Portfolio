@@ -14,6 +14,13 @@ const featuredProjects = [
         link: "projects.html?project=sheenas"
     },
     {
+        title: "Simple Typing Game",
+        description: "A basic typing game to test and improve typing speed and accuracy.",
+        image: "assets/img/projects/justtype/justtype-thumbnail.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=typing_game"
+    },
+    {
         title: "Interactive Quiz Game",
         description: "A simple interactive math quiz focused on basic addition and subtraction.",
         image: "assets/img/projects/quiz/quiz.png",
@@ -201,6 +208,21 @@ const projectsData = {
         ],
         github: "https://github.com/PhilipArland/sheenas",
         live: "https://sheenas.vercel.app",
+    },
+
+    typing_game: {
+        logo: "assets/img/projects/justtype/logo.png",
+        title: "JustType",
+        description: "JustType is a clean and simple typing game clone inspired by Monkeytype, designed to help users practice and improve their typing speed and accuracy. Built with HTML, CSS, and JavaScript, it offers a user-friendly interface where players can test their skills in a fun and engaging way.",
+        images: [
+            "assets/img/projects/justtype/justtype.png",
+            "assets/img/projects/justtype/justtype1.png",
+            "assets/img/projects/justtype/justtype2.png",
+            "assets/img/projects/justtype/justtype3.png",
+            "assets/img/projects/justtype/justtype4.png",
+        ],
+        github: "https://github.com/PhilipArland/justType",
+        live: "https://flip-just-type.vercel.app",
     },
 
     haikyuu: {
