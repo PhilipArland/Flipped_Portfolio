@@ -161,6 +161,12 @@ body {
 }
 
 
+.git-legend {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
 
 
 
@@ -308,7 +314,9 @@ body {
 }
 
 @media (max-width: 640px) {
-    html, body {
+
+    html,
+    body {
         overflow-x: hidden;
     }
 

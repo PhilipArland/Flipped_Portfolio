@@ -37,15 +37,50 @@
                         <h5 class="fw-semibold mb-3 gap-2 ">
                             <i class="fab fa-github me-1"></i> GitHub Contributions
                         </h5>
-                        <div class="overflow-auto">
-                            <div class="d-flex justify-content-center">
-                                <div class="bg-white p-3 rounded" style="overflow-x: auto;">
-                                    <img src="https://ghchart.rshah.org/PhilipArlandAlili"
-                                        alt="GitHub Contributions Chart" class="img-fluid"
-                                        style="min-width: 900px; max-width: none;">
+                        <div class="github-contributions">
+                            <!-- Tabs -->
+                            <ul class="nav nav-tabs mb-2" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="old-tab" data-bs-toggle="tab"
+                                        data-bs-target="#old" type="button" role="tab">Old GitHub</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="new-tab" data-bs-toggle="tab" data-bs-target="#new"
+                                        type="button" role="tab">New GitHub</button>
+                                </li>
+                            </ul>
+
+                            <!-- Tab content -->
+                            <div class="overflow-auto">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active bg-white p-3 rounded" id="old" role="tabpanel" style="overflow-x: auto;">
+                                        <img src="https://ghchart.rshah.org/PhilipArlandAlili"
+                                            alt="Old GitHub Contributions" class="img-fluid"
+                                            style="min-width: 900px; max-width: none;">
+                                    </div>
+                                    <div class="tab-pane fade bg-white p-3 rounded" id="new" role="tabpanel" style="overflow-x: auto;">
+                                        <img src="https://ghchart.rshah.org/PhilipArland" alt="New GitHub Contributions"
+                                            class="img-fluid" style="min-width: 900px; max-width: none;">
+                                    </div>
                                 </div>
                             </div>
+
+
+                            <!-- Legend -->
+                            <div class="d-flex align-items-center mt-2 gap-2">
+                                <span>Less</span>
+                                <div class="d-flex gap-1">
+                                    <span class="git-legend" style="background:#ebedf0;"></span>
+                                    <span class="git-legend" style="background:#c6e48b;"></span>
+                                    <span class="git-legend" style="background:#7bc96f;"></span>
+                                    <span class="git-legend" style="background:#239a3b;"></span>
+                                    <span class="git-legend" style="background:#196127;"></span>
+                                    <span class="git-legend" style="background:#0f4915;"></span>
+                                </div>
+                                <span>More</span>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
