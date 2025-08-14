@@ -366,4 +366,8 @@ body {
         -webkit-line-clamp: unset;
         display: block;
     }
+
+    #info p {
+        font-size: 0.9rem;
+    }
 }

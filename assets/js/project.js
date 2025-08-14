@@ -114,17 +114,17 @@ function generateFeaturedProjectsHTML() {
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
                     <img src="${project.image}" alt="${project.title}" class="card-img-top">
                     <div class="card-body d-flex flex-column justify-content-between">
-                        <div class="details mb-3">
+                        <div class="details mb-0">
                             <h6 class="fw-bold mb-2">${project.title}</h6>
                             <p class="text-muted small">${project.description}</p>
                         </div>
                         <div class="tech-stack">
-                            <div class="d-flex flex-wrap gap-1">
+                            <div class="d-flex flex-wrap gap-0">
                                 ${project.tech.map(getTechBadge).join('')}
                             </div>
                         </div>
                         ${project.link ? `
-                        <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="d-flex justify-content-between align-items-center mt-0">
                             <a href="${project.link}" class="w-100 btn btn-outline-primary btn-sm">
                                 <i class="fas fa-eye me-1"></i> View Project
                             </a>
@@ -151,7 +151,7 @@ function generateFeaturedProjectsHTML() {
             <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden mb-3">
                 <img src="${project.image}" alt="${project.title}" class="card-img-top">
                 <div class="card-body d-flex flex-column justify-content-between">
-                    <div class="details mb-3">
+                    <div class="details mb-0">
                         <h6 class="fw-bold mb-2">${project.title}</h6>
                         <p class="text-muted small">${project.description}</p>
                     </div>
