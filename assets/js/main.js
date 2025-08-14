@@ -167,3 +167,17 @@ document.addEventListener("click", function (e) {
         }
     }
 });
+
+const legend = document.getElementById('github-legend');
+const tabButtons = document.querySelectorAll('[data-bs-toggle="tab"]');
+
+tabButtons.forEach(button => {
+    button.addEventListener('shown.bs.tab', function (event) {
+        const target = event.target.getAttribute('data-bs-target');
+        if (target === '#info') {
+            legend.classList.add('d-none');
+        } else {
+            legend.classList.remove('d-none');
+        }
+    });
+});
