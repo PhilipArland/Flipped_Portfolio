@@ -41,13 +41,13 @@ const featuredProjects = [
     //     tech: ["html5", "css3-alt"],
     //     link: "projects.html?project=spyxfam"
     // },
-    {
-        title: "Current Portfolio",
-        description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
-        image: "assets/img/projects/portfolio/portfolio.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap"],
-        link: "projects.html?project=portfolio"
-    },
+    // {
+    //     title: "Current Portfolio",
+    //     description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
+    //     image: "assets/img/projects/portfolio/portfolio.png",
+    //     tech: ["html5", "css3-alt", "js", "bootstrap"],
+    //     link: "projects.html?project=portfolio"
+    // },
     {
         title: "Portfolio V2",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
@@ -118,7 +118,7 @@ function generateFeaturedProjectsHTML() {
                             <h6 class="fw-bold mb-2">${project.title}</h6>
                             <p class="text-muted small">${project.description}</p>
                         </div>
-                        <div class="tech-stack">
+                        <div class="tech-stack pb-1">
                             <div class="d-flex flex-wrap gap-0">
                                 ${project.tech.map(getTechBadge).join('')}
                             </div>
@@ -251,18 +251,18 @@ const projectsData = {
         live: "https://flip-simple-quiz.vercel.app",
     },
 
-    portfolio: {
-        logo: "assets/img/projects/portfolio/logo.png",
-        title: "My Portfolio",
-        description: "This is my personal portfolio website, built to showcase my projects and skills. It features a clean, responsive design using HTML, CSS, and JavaScript, with a focus on user experience and accessibility.",
-        images: [
-            "assets/img/projects/portfolio/portfolio.png",
-            "assets/img/projects/portfolio/portfolio1.png",
-            "assets/img/projects/portfolio/portfolio2.png",
-        ],
-        github: "https://github.com/PhilipArland/Flipped_Portfolio",
-        live: "https://flipped-portfolio.vercel.app",
-    },
+    // portfolio: {
+    //     logo: "assets/img/projects/portfolio/logo.png",
+    //     title: "My Portfolio",
+    //     description: "This is my personal portfolio website, built to showcase my projects and skills. It features a clean, responsive design using HTML, CSS, and JavaScript, with a focus on user experience and accessibility.",
+    //     images: [
+    //         "assets/img/projects/portfolio/portfolio.png",
+    //         "assets/img/projects/portfolio/portfolio1.png",
+    //         "assets/img/projects/portfolio/portfolio2.png",
+    //     ],
+    //     github: "https://github.com/PhilipArland/Flipped_Portfolio",
+    //     live: "https://flipped-portfolio.vercel.app",
+    // },
 
     portfolio_v2: {
         logo: "assets/img/projects/portfolio/logo.png",
