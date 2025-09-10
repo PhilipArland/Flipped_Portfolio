@@ -1,9 +1,9 @@
 const featuredProjects = [
     {
         title: "Cozy To-Do List",
-        description: "",
+        description: "A cozy productivity app for managing daily tasks with an integrated music player.",
         image: "assets/img/projects/cozy/cozy-thumbnail.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=cozy"
     },
     {
@@ -188,18 +188,18 @@ function generateFeaturedProjectsHTML() {
 const projectsData = {
     cozy: {
         logo: "assets/img/projects/cozy/logo.png",
-        title: "cozy",
-        description: "cozy is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
+        title: "Cozy To-Do List",
+        description: "Cozy To-Do List is a productivity web app I built using HTML, CSS, JavaScript, and Bootstrap. It helps users track daily tasks with a calendar view and a built-in music player for a more engaging experience. Tasks are stored in LocalStorage, ensuring data is saved across sessions without the need for a backend.",
         images: [
             "assets/img/projects/cozy/cozy.png",
             "assets/img/projects/cozy/cozy1.png",
             "assets/img/projects/cozy/cozy2.png",
             "assets/img/projects/cozy/cozy3.png",
         ],
-        github: "https://github.com/PhilipArland/shoewave",
-        live: "https://shoewave.vercel.app",
+        github: "https://github.com/PhilipArland/cozy-flipped",
+        live: "https://cozy-flipped.vercel.app",
     },
-    
+
     shoewave: {
         logo: "assets/img/projects/shoewave/logo.png",
         title: "ShoeWave",
