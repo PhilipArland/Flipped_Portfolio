@@ -1,5 +1,12 @@
 const featuredProjects = [
     {
+        title: "Cozy To-Do List",
+        description: "",
+        image: "assets/img/projects/cozy/cozy-thumbnail.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
+        link: "projects.html?project=cozy"
+    },
+    {
         title: "E-Commerce Platform",
         description: "A modern e-commerce website for sneakers featuring clean, responsive design.",
         image: "assets/img/projects/shoewave/shoewave-thumbnail.png",
@@ -179,6 +186,20 @@ function generateFeaturedProjectsHTML() {
 
 
 const projectsData = {
+    cozy: {
+        logo: "assets/img/projects/cozy/logo.png",
+        title: "cozy",
+        description: "cozy is a sneaker-focused e-commerce website I built using HTML, CSS, JavaScript, and Bootstrap. I designed it to be clean and easy to use, with a responsive layout that works well on both desktop and mobile devices. The goal was to create a modern online store feel, with smooth user experience and attention to visual details.",
+        images: [
+            "assets/img/projects/cozy/cozy.png",
+            "assets/img/projects/cozy/cozy1.png",
+            "assets/img/projects/cozy/cozy2.png",
+            "assets/img/projects/cozy/cozy3.png",
+        ],
+        github: "https://github.com/PhilipArland/shoewave",
+        live: "https://shoewave.vercel.app",
+    },
+    
     shoewave: {
         logo: "assets/img/projects/shoewave/logo.png",
         title: "ShoeWave",
