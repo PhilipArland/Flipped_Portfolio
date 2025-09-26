@@ -14,6 +14,13 @@ const featuredProjects = [
         link: "projects.html?project=shoewave"
     },
     {
+        title: "Classic Pac-Man Game",
+        description: "A browser-based Pac-Man game with classic gameplay and responsive design.",
+        image: "assets/img/projects/pacman/pacman-thumbnail.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=pacman"
+    },
+    {
         title: "Pension House Website",
         description: "A clean, static site showcasing rooms, tour packages, and key guest info.",
         image: "assets/img/projects/sheenas/sheenas-thumbnail.png",
@@ -212,6 +219,20 @@ const projectsData = {
         ],
         github: "https://github.com/PhilipArland/shoewave",
         live: "https://shoewave.vercel.app",
+    },
+
+    pacman: {
+        logo: "assets/img/projects/pacman/logo.png",
+        title: "Pac-Man Game",
+        description: "A browser-based Pac-Man game featuring intelligent ghost AI, and responsive canvas design. Built with HTML, CSS, JavaScript, and Bootstrap, it provides a fun arcade experience with smooth gameplay and interactive visuals.",
+        images: [
+            "assets/img/projects/pacman/pacman.png",
+            "assets/img/projects/pacman/pacman1.png",
+            "assets/img/projects/pacman/pacman2.png",
+            "assets/img/projects/pacman/pacman3.png",
+        ],
+        github: "https://github.com/PhilipArland/pacman_game",
+        live: "https://flip-pacman.vercel.app",
     },
 
     sheenas: {
