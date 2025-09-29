@@ -76,13 +76,13 @@ const featuredProjects = [
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v1"
     },
-    {
-        title: "Health Office Dashboard",
-        description: "A responsive web dashboard for managing and visualizing health office data.",
-        image: "assets/img/projects/pho/admin_dashboard.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
-        link: "projects.html?project=pho_dashboard"
-    }
+    // {
+    //     title: "Health Office Dashboard",
+    //     description: "A responsive web dashboard for managing and visualizing health office data.",
+    //     image: "assets/img/projects/pho/admin_dashboard.png",
+    //     tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
+    //     link: "projects.html?project=pho_dashboard"
+    // }
 ];
 
 function getTechBadge(icon) {
