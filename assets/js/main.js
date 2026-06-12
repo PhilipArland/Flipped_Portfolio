@@ -30,13 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load sidebar
     loadHTML("sidebar-placeholder", "includes/sidebar.html", () => {
         sidebarLoaded = true;
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
         checkAndSetActive();
     });
 
     // Load navbar & apply theme/logo
     loadHTML("navbar-placeholder", "includes/navbar.html", () => {
         navbarLoaded = true;
-        applyThemeAndLogo(); // ensure correct logo and theme after navbar loads
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        applyThemeAndLogo();
         checkAndSetActive();
     });
 
