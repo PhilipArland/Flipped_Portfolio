@@ -376,6 +376,7 @@ body {
 /* Experience Styles */
 .lh-sm small {
     letter-spacing: .8px;
+    font-size: .7rem;
 }
 
 .carousel-overlay {

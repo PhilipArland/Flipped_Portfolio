@@ -84,8 +84,8 @@ const experiences = {
             "assets/img/experience/_LRC2791.jpg",
             "assets/img/experience/_LRC1794.jpg",
             "assets/img/experience/_LRC3121.jpg",
-            "assets/img/experience/holloween.jpg",
-            "assets/img/experience/holloween2.jpg"
+            "assets/img/experience/halloween.jpg",
+            "assets/img/experience/halloween2.jpg"
         ]
     },
 
@@ -114,7 +114,7 @@ function setExperience(key) {
         html += `
             <div class="carousel-item ${i === 0 ? 'active' : ''}">
                 <img src="${img}" class="d-block w-100"
-                     style="height:45vh; object-fit:cover;">
+                     style="height:40vh; object-fit:cover;">
             </div>
         `;
     });
