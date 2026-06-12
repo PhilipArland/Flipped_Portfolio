@@ -320,6 +320,14 @@ body {
     }
 }
 
+.carousel-item .exp-img {
+    width: 100%;
+    height: 43vh;
+    object-fit: cover;
+}
+
+
+
 @media (max-width: 640px) {
 
     html,
@@ -370,6 +378,10 @@ body {
     #info p {
         font-size: 0.9rem;
     }
+
+    .carousel-item .exp-img {
+        height: 30vh;
+    }
 }
 
 
@@ -384,7 +396,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 60%;
+    height: 40%;
     background: linear-gradient(to top,
             rgba(0, 0, 0, 1),
             transparent);
@@ -407,4 +419,21 @@ body {
 
 .carousel-caption-custom small {
     color: rgba(255, 255, 255, 0.85);
+}
+
+.work-exp-btn {
+    color: var(--text-dark) !important;
+}
+
+.work-exp-btn.active {
+    background-color: var(--bg-stat-card) !important;
+}
+
+.work-exp-btn,
+.work-exp-btn:hover,
+.work-exp-btn:focus,
+.work-exp-btn:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }

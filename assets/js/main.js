@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (githubSection) githubSection.style.display = "none";
     }
 
-    if (document.getElementById("experienceCarousel")) {
+    if (document.getElementById("portfolioCarousel")) {
         setExperience("spinnaker");
     }
 });
@@ -83,7 +83,6 @@ const experiences = {
         images: [
             "assets/img/experience/_LRC2791.jpg",
             "assets/img/experience/_LRC1794.jpg",
-            "assets/img/experience/_LRC3121.jpg",
             "assets/img/experience/halloween.jpg",
             "assets/img/experience/halloween2.jpg"
         ]
@@ -102,26 +101,28 @@ const experiences = {
 };
 
 function setExperience(key) {
+    document.querySelectorAll('.work-exp-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    document.getElementById(`btn-${key}`).classList.add('active');
+
     const exp = experiences[key];
 
-    // overlay text
     document.getElementById("overlayTitle").textContent = exp.title;
     document.getElementById("overlaySubtitle").textContent = exp.subtitle;
 
-    // build carousel
     let html = "";
     exp.images.forEach((img, i) => {
         html += `
             <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                <img src="${img}" class="d-block w-100"
-                     style="height:40vh; object-fit:cover;">
+                <img src="${img}" class="d-block w-100 exp-img">
             </div>
         `;
     });
 
     document.getElementById("carouselContent").innerHTML = html;
 
-    // reset carousel to first slide
     const carousel = bootstrap.Carousel.getOrCreateInstance(
         document.querySelector("#portfolioCarousel")
     );
