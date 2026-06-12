@@ -371,3 +371,44 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
+/* Experience Styles */
+.lh-sm small {
+    letter-spacing: .8px;
+}
+
+#portfolioCarousel .carousel-item img {
+    height: 45vh;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 1),
+            transparent);
+    z-index: 1;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.carousel-caption-custom {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 2;
+    color: #fff;
+}
+
+.carousel-caption-custom h6 {
+    color: #fff;
+}
+
+.carousel-caption-custom small {
+    color: rgba(255, 255, 255, 0.85);
+}
