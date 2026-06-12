@@ -72,6 +72,33 @@
                         </button>
                     </div>
                 </div>
+
+                <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4 mb-1">
+                    <h5 class="fw-semibold mb-3 gap-2 ">
+                        <i class="fas fa-award me-1"></i> Certifications
+                    </h5>
+
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo" width="50" height="50"
+                            class="me-3">
+
+                        <div class="lh-md">
+                            <h6 class="mb-0 fw-semibold">Responsive Web Design</h6>
+                            <small class="d-block">freeCodeCamp</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                Issued Jan 2025
+                            </small>
+                        </div>
+
+                        <button class="btn btn-sm btn-outline-dark ms-auto" data-bs-toggle="modal"
+                            data-bs-target="#certModal">
+                            View Certificate
+                        </button>
+                    </div>
+
+                    <hr>
+                </div>
             </div>
 
             <div class="col-md-4">
@@ -116,6 +143,16 @@
     </div>
 
 
+    <!-- Cert Modal -->
+    <div class="modal fade" id="certModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/certificates/responsive-web-design.png" class="img-fluid rounded" alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
