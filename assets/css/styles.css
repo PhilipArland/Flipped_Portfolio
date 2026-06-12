@@ -378,17 +378,12 @@ body {
     letter-spacing: .8px;
 }
 
-#portfolioCarousel .carousel-item img {
-    height: 45vh;
-    object-fit: cover;
-}
-
 .carousel-overlay {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 50%;
+    height: 60%;
     background: linear-gradient(to top,
             rgba(0, 0, 0, 1),
             transparent);

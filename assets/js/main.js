@@ -70,6 +70,67 @@ document.addEventListener("DOMContentLoaded", function () {
         const githubSection = document.getElementById("github-contributions");
         if (githubSection) githubSection.style.display = "none";
     }
+
+    if (document.getElementById("experienceCarousel")) {
+        setExperience("spinnaker");
+    }
+});
+
+const experiences = {
+    spinnaker: {
+        title: "Spinnaker Global Services",
+        subtitle: "Maintained and optimized company websites, implemented UI improvements, and contributed to enhancing overall user experience and interface consistency.",
+        images: [
+            "assets/img/experience/_LRC2791.jpg",
+            "assets/img/experience/_LRC1794.jpg",
+            "assets/img/experience/_LRC3121.jpg",
+            "assets/img/experience/holloween.jpg",
+            "assets/img/experience/holloween2.jpg"
+        ]
+    },
+
+    pho: {
+        title: "Provincial Health Office (OJT)",
+        subtitle: "Assisted in office operations and documentation while gaining hands-on experience in a government environment.",
+        images: [
+            "assets/img/experience/1.png",
+            "assets/img/experience/2.png",
+            "assets/img/experience/3.png",
+            "assets/img/experience/4.png",
+        ]
+    }
+};
+
+function setExperience(key) {
+    const exp = experiences[key];
+
+    // overlay text
+    document.getElementById("overlayTitle").textContent = exp.title;
+    document.getElementById("overlaySubtitle").textContent = exp.subtitle;
+
+    // build carousel
+    let html = "";
+    exp.images.forEach((img, i) => {
+        html += `
+            <div class="carousel-item ${i === 0 ? 'active' : ''}">
+                <img src="${img}" class="d-block w-100"
+                     style="height:45vh; object-fit:cover;">
+            </div>
+        `;
+    });
+
+    document.getElementById("carouselContent").innerHTML = html;
+
+    // reset carousel to first slide
+    const carousel = bootstrap.Carousel.getOrCreateInstance(
+        document.querySelector("#portfolioCarousel")
+    );
+    carousel.to(0);
+}
+
+// default load
+document.addEventListener("DOMContentLoaded", () => {
+    setExperience("spinnaker");
 });
 
 function loadHTML(id, file, callback) {

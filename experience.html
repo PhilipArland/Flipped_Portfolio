@@ -34,33 +34,19 @@
                             <i class="fas fa-arrow-left me-1"></i> Back to home</a>
                     </div>
 
-                    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner rounded-4 overflow-hidden">
-                            <div class="carousel-item active">
-                                <img src="assets/img/experience/_LRC2791.jpg" class="d-block w-100" alt="Slide 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/experience/_LRC1794.jpg" class="d-block w-100" alt="Slide 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/experience/_LRC3121.jpg" class="d-block w-100" alt="Slide 3">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/experience/holloween.jpg" class="d-block w-100" alt="Slide 4">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/img/experience/holloween2.jpg" class="d-block w-100" alt="Slide 5">
-                            </div>
+                    <div id="portfolioCarousel" class="carousel slide">
+
+                        <div class="carousel-inner rounded-4 overflow-hidden" id="carouselContent">
+                            <!-- JS injects slides here -->
                         </div>
 
                         <div class="carousel-overlay"></div>
+
                         <div class="carousel-caption-custom">
-                            <h6 class="fw-semibold mb-1">Spinnaker Global Services</h6>
-                            <small class="d-block">
-                                Maintained and optimized company websites, implemented UI improvements, and
-                                contributed to enhancing overall user experience and interface consistency.
-                            </small>
+                            <h6 class="fw-semibold mb-1" id="overlayTitle"></h6>
+                            <small id="overlaySubtitle"></small>
                         </div>
+
                         <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -70,17 +56,18 @@
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
+
                     </div>
                 </div>
 
                 <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4 mb-1">
                     <h5 class="fw-semibold mb-3 gap-2 ">
-                        <i class="fas fa-award me-1"></i> Certifications
+                        <i class="fas fa-award me-1 text-purple"></i> Certifications
                     </h5>
 
                     <div class="d-flex align-items-start mb-1">
-                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo" width="50" height="50"
-                            class="me-3">
+                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo"
+                            class="img-fluid rounded-circle me-3" width="50" height="50" class="me-3">
 
                         <div class="lh-md">
                             <h6 class="mb-0 fw-semibold">Responsive Web Design</h6>
@@ -98,44 +85,70 @@
                     </div>
 
                     <hr>
+
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo"
+                            class="img-fluid rounded-circle me-3" width="50" height="50" class="me-3">
+
+                        <div class="lh-md">
+                            <h6 class="mb-0 fw-semibold">Data Analysis with Python</h6>
+                            <small class="d-block">freeCodeCamp</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                Issued Nov 2023
+                            </small>
+                        </div>
+
+                        <button class="btn btn-sm btn-outline-dark ms-auto" data-bs-toggle="modal"
+                            data-bs-target="#certModal1">
+                            View Certificate
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4">
                     <h5 class="fw-semibold mb-3">
-                        <i class="fas fa-user-tie me-2"></i> Work Experience
+                        <i class="fas fa-user-tie me-2 text-purple"></i> Work Experience
                     </h5>
 
-                    <div class="d-flex align-items-start mb-1">
-                        <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="60" height="60" class="me-3">
+                    <button class="btn btn-outline-light w-100 mb-2 active text-start" id="btn-spinnaker"
+                        onclick="setExperience('spinnaker')">
+                        <div class="d-flex align-items-start mb-1">
+                            <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="60" height="60"
+                                class="me-3">
 
-                        <div class="lh-sm">
-                            <h6 class="mb-0 fw-semibold">Website Developer</h6>
-                            <small class="d-block">Spinnaker Global Services</small>
-                            <small class="d-block">Puerto Princesa City, Palawan</small>
-                            <small class="d-block text-muted">
-                                <i class="fas fa-calendar me-1"></i>
-                                Oct 2025 - Present
-                            </small>
+                            <div class="lh-sm">
+                                <h6 class="mb-0 fw-semibold">Website Developer</h6>
+                                <small class="d-block">Spinnaker Global Services</small>
+                                <small class="d-block">Puerto Princesa City, Palawan</small>
+                                <small class="d-block text-muted">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Oct 2025 - Present
+                                </small>
+                            </div>
                         </div>
-                    </div>
+                    </button>
 
                     <hr>
 
-                    <div class="d-flex align-items-start mb-1">
-                        <img src="assets/img/pho.png" alt="PHO Logo" width="60" height="60" class="me-3">
+                    <button class="btn btn-outline-light w-100 text-dark mb-2 text-start" id="btn-pho"
+                        onclick="setExperience('pho')">
+                        <div class="d-flex align-items-start mb-1">
+                            <img src="assets/img/pho.png" alt="PHO Logo" width="60" height="60" class="me-3">
 
-                        <div class="lh-sm ls-1">
-                            <h6 class="mb-0 fw-semibold">On-the-Job Training (OJT)</h6>
-                            <small class="d-block">Provincial Health Office</small>
-                            <small class="d-block">Puerto Princesa City, Palawan</small>
-                            <small class="d-block text-muted">
-                                <i class="fas fa-calendar me-1"></i>
-                                Feb 2025 - Apr 2025
-                            </small>
+                            <div class="lh-sm ls-1">
+                                <h6 class="mb-0 fw-semibold">On-the-Job Training (OJT)</h6>
+                                <small class="d-block">Provincial Health Office</small>
+                                <small class="d-block">Puerto Princesa City, Palawan</small>
+                                <small class="d-block text-muted">
+                                    <i class="fas fa-calendar me-1"></i>
+                                    Feb 2025 - Apr 2025
+                                </small>
+                            </div>
                         </div>
-                    </div>
+                    </button>
 
                 </div>
             </div>
@@ -148,12 +161,23 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-body text-center">
-                    <img src="assets/img/certificates/responsive-web-design.png" class="img-fluid rounded" alt="Certificate">
+                    <img src="assets/img/certificates/responsive-web-design.png" class="img-fluid rounded"
+                        alt="Certificate">
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal fade" id="certModal1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/certificates/data-analysis-with-python.png" class="img-fluid rounded"
+                        alt="Certificate">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
