@@ -1,7 +1,7 @@
 const featuredProjects = [
     {
         title: "Expense Tracker",
-        description: "",
+        description: "A modern expense tracker that helps users monitor and organize spending habits.",
         image: "assets/img/projects/tracker/tracker-thumbnail.png",
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=tracker"
@@ -192,7 +192,7 @@ function generateFeaturedProjectsHTML() {
         `;
     });
 
-    html += `</div>`; // Close small screen container
+    html += `</div>`;
 
     return html;
 }
@@ -203,13 +203,12 @@ const projectsData = {
     tracker: {
         logo: "assets/img/projects/tracker/logo.png",
         title: "Expense Tracker",
-        description: "Expense Tracker is a productivity web app I built using HTML, CSS, JavaScript, and Bootstrap. It helps users track daily tasks with a calendar view and a built-in music player for a more engaging experience. Tasks are stored in LocalStorage, ensuring data is saved across sessions without the need for a backend.",
-        images: [
+        description: "Expense Tracker is a personal finance web app I built using HTML, CSS, JavaScript, and Bootstrap. It allows users to record income and expenses, categorize transactions, and monitor their financial activity through an intuitive interface. Data is stored in LocalStorage, ensuring expenses and budgets remain available across sessions without requiring a backend.", images: [
             "assets/img/projects/tracker/tracker.png",
             "assets/img/projects/tracker/tracker1.png",
             "assets/img/projects/tracker/tracker2.png",
         ],
-        github: "https://github.com/PhilipArland/flipped-tracker",
+        github: "https://github.com/PhilipArland/expense_tracker",
         live: "https://flipped-tracker.vercel.app",
     },
     cozy: {
