@@ -1,5 +1,12 @@
 const featuredProjects = [
     {
+        title: "Expense Tracker",
+        description: "",
+        image: "assets/img/projects/tracker/tracker-thumbnail.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=tracker"
+    },
+    {
         title: "Cozy To-Do List",
         description: "A cozy productivity app for managing daily tasks with an integrated music player.",
         image: "assets/img/projects/cozy/cozy-thumbnail.png",
@@ -193,6 +200,18 @@ function generateFeaturedProjectsHTML() {
 
 
 const projectsData = {
+    tracker: {
+        logo: "assets/img/projects/tracker/logo.png",
+        title: "Expense Tracker",
+        description: "Expense Tracker is a productivity web app I built using HTML, CSS, JavaScript, and Bootstrap. It helps users track daily tasks with a calendar view and a built-in music player for a more engaging experience. Tasks are stored in LocalStorage, ensuring data is saved across sessions without the need for a backend.",
+        images: [
+            "assets/img/projects/tracker/tracker.png",
+            "assets/img/projects/tracker/tracker1.png",
+            "assets/img/projects/tracker/tracker2.png",
+        ],
+        github: "https://github.com/PhilipArland/flipped-tracker",
+        live: "https://flipped-tracker.vercel.app",
+    },
     cozy: {
         logo: "assets/img/projects/cozy/logo.png",
         title: "Cozy To-Do List",
