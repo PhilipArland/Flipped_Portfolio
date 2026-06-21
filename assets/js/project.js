@@ -1,12 +1,5 @@
 const featuredProjects = [
     {
-        title: "Expense Tracker",
-        description: "A modern expense tracker that helps users monitor and organize spending habits.",
-        image: "assets/img/projects/tracker/tracker-thumbnail.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap"],
-        link: "projects.html?project=tracker"
-    },
-    {
         title: "Cozy To-Do List",
         description: "A cozy productivity app for managing daily tasks with an integrated music player.",
         image: {
@@ -29,6 +22,13 @@ const featuredProjects = [
         image: "assets/img/projects/pacman/pacman-thumbnail.png",
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=pacman"
+    },
+    {
+        title: "Expense Tracker",
+        description: "A modern expense tracker that helps users monitor and organize spending habits.",
+        image: "assets/img/projects/tracker/tracker-thumbnail.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap"],
+        link: "projects.html?project=tracker"
     },
     {
         title: "Pension House Website",
