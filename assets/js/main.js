@@ -15,6 +15,13 @@ function toggleDarkMode() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
     applyThemeAndLogo();
+
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get("project");
+
+    if (projectId && projectsData[projectId]) {
+        displayProject(projectId);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {

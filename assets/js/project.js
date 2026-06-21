@@ -214,13 +214,21 @@ const projectsData = {
     cozy: {
         logo: "assets/img/projects/cozy/logo.png",
         title: "Cozy To-Do List",
-        description: "Cozy To-Do List is a productivity web app I built using HTML, CSS, JavaScript, and Bootstrap. It helps users track daily tasks with a calendar view and a built-in music player for a more engaging experience. Tasks are stored in LocalStorage, ensuring data is saved across sessions without the need for a backend.",
-        images: [
-            "assets/img/projects/cozy/cozy.png",
-            "assets/img/projects/cozy/cozy1.png",
-            "assets/img/projects/cozy/cozy2.png",
-            "assets/img/projects/cozy/cozy3.png",
-        ],
+        description: "Cozy To-Do List is a productivity web app...",
+        images: {
+            light: [
+                "assets/img/projects/cozy/cozy.png",
+                "assets/img/projects/cozy/cozy1.png",
+                "assets/img/projects/cozy/cozy2.png",
+                "assets/img/projects/cozy/cozy3.png",
+            ],
+            dark: [
+                "assets/img/projects/cozy/cozy-dark.png",
+                "assets/img/projects/cozy/cozy-dark1.png",
+                "assets/img/projects/cozy/cozy-dark2.png",
+                "assets/img/projects/cozy/cozy-dark3.png",
+            ]
+        },
         github: "https://github.com/PhilipArland/cozy-flipped",
         live: "https://cozy-flipped.vercel.app",
     },
@@ -363,10 +371,22 @@ function displayProject(projectId) {
     project_card.className = "project_card p-3 p-md-4 pb-0 mb-0";
 
     // Add images
-    const imagesHtml = project.images
+    const isDarkMode =
+        document.documentElement.getAttribute("data-theme") === "dark";
+
+    const projectImages =
+        project.images?.light
+            ? (isDarkMode ? project.images.dark : project.images.light)
+            : project.images; // fallback for other projects
+
+    const imagesHtml = projectImages
         .map((src, index) => {
-            const isLast = index === project.images.length - 1;
-            return `<img src="${src}" class="img-fluid rounded-4 h-100 ${isLast ? 'mb-0' : 'mb-3'}" alt="${project.title}">`;
+            const isLast = index === projectImages.length - 1;
+            return `
+            <img src="${src}"
+                 class="img-fluid rounded-4 h-100 ${isLast ? 'mb-0' : 'mb-3'}"
+                 alt="${project.title}">
+        `;
         })
         .join("");
 
