@@ -9,7 +9,7 @@ const featuredProjects = [
     {
         title: "Cozy To-Do List",
         description: "A cozy productivity app for managing daily tasks with an integrated music player.",
-        image: "assets/img/projects/cozy/cozy-thumbnail.png",
+        image: "assets/img/projects/cozy/cozy-thumbnail-light.png",
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=cozy"
     },
@@ -199,13 +199,13 @@ const projectsData = {
     cozy: {
         logo: "assets/img/projects/cozy/logo.png",
         title: "Cozy To-Do List",
-        description: "Cozy To-Do List is a productivity web app...",
+        description: "Cozy To-Do List is a productivity web application I built using HTML, CSS, JavaScript, and Bootstrap. It helps users organize daily tasks through a clean and cozy interface designed to make task management more enjoyable. The app features task creation, completion tracking, and an integrated music player that provides a relaxing atmosphere while working. It also includes light and dark themes, allowing users to personalize their experience and stay productive in a comfortable environment.",
         images: {
             light: [
                 "assets/img/projects/cozy/cozy.png",
-                "assets/img/projects/cozy/cozy1.png",
-                "assets/img/projects/cozy/cozy2.png",
-                "assets/img/projects/cozy/cozy3.png",
+                "assets/img/projects/cozy/cozy-1.png",
+                "assets/img/projects/cozy/cozy-2.png",
+                "assets/img/projects/cozy/cozy-3.png",
             ],
             dark: [
                 "assets/img/projects/cozy/cozy-dark.png",
