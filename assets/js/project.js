@@ -224,9 +224,9 @@ const projectsData = {
             ],
             dark: [
                 "assets/img/projects/cozy/cozy-dark.png",
-                "assets/img/projects/cozy/cozy-dark1.png",
-                "assets/img/projects/cozy/cozy-dark2.png",
-                "assets/img/projects/cozy/cozy-dark3.png",
+                "assets/img/projects/cozy/cozy-dark-1.png",
+                "assets/img/projects/cozy/cozy-dark-2.png",
+                "assets/img/projects/cozy/cozy-dark-3.png",
             ]
         },
         github: "https://github.com/PhilipArland/cozy-flipped",
@@ -393,7 +393,7 @@ function displayProject(projectId) {
     project_card.innerHTML = `
     <div class="p-0">
         <div class="mb-3">
-            <a href="projects.html" class="text-back">
+            <a href="projects.html" class="text-back text-dark">
                 <i class="fas fa-arrow-left me-1"></i></a>
         </div>
 

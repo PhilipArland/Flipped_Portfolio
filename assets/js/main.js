@@ -4,16 +4,18 @@ function applyThemeAndLogo() {
 
     if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        if (logo) logo.src = 'assets/img/2.png'; // dark mode logo
+        if (logo) logo.src = 'assets/img/2.png';
     } else {
         document.documentElement.removeAttribute('data-theme');
-        if (logo) logo.src = 'assets/img/1.png'; // light mode logo
+        if (logo) logo.src = 'assets/img/1.png';
     }
 }
+applyThemeAndLogo();
 
 function toggleDarkMode() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
+
     applyThemeAndLogo();
 
     const params = new URLSearchParams(window.location.search);
