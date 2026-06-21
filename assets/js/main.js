@@ -22,7 +22,7 @@ function toggleDarkMode() {
     const projectId = params.get("project");
 
     if (projectId && projectsData[projectId]) {
-        displayProject(projectId);
+        updateProjectImages(projectId);
     }
 }
 

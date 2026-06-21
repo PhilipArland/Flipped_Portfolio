@@ -182,6 +182,18 @@ function generateFeaturedProjectsHTML() {
     return html;
 }
 
+function updateProjectImages(projectId) {
+    const project = projectsData[projectId];
+    if (!project.images?.light) return; // nothing to swap for single-image-set projects
+
+    const isDarkMode = document.documentElement.getAttribute("data-theme") === "dark";
+    const newImages = isDarkMode ? project.images.dark : project.images.light;
+
+    const imgEls = document.querySelectorAll(".project_card .mb-3.d-flex.flex-column img");
+    imgEls.forEach((img, i) => {
+        if (newImages[i]) img.src = newImages[i];
+    });
+}
 
 
 const projectsData = {
