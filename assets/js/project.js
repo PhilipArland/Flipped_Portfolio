@@ -55,20 +55,6 @@ const featuredProjects = [
         tech: ["html5", "css3-alt"],
         link: "projects.html?project=haikyuu"
     },
-    // {
-    //     title: "Spy x Family Themed Page",
-    //     description: "A simple themed webpage inspired by Spy x Family. Designed only with HTML and CSS.",
-    //     image: "assets/img/projects/spyxfam/anya.png",
-    //     tech: ["html5", "css3-alt"],
-    //     link: "projects.html?project=spyxfam"
-    // },
-    // {
-    //     title: "Current Portfolio",
-    //     description: "My personal portfolio showcasing projects and skills, built with HTML, CSS, and JavaScript.",
-    //     image: "assets/img/projects/portfolio/portfolio.png",
-    //     tech: ["html5", "css3-alt", "js", "bootstrap"],
-    //     link: "projects.html?project=portfolio"
-    // },
     {
         title: "Portfolio V2",
         description: "A previous version of my personal portfolio built with basic HTML, CSS, and JavaScript.",
@@ -83,13 +69,13 @@ const featuredProjects = [
         tech: ["html5", "css3-alt", "js"],
         link: "projects.html?project=portfolio_v1"
     },
-    // {
-    //     title: "Health Office Dashboard",
-    //     description: "A responsive web dashboard for managing and visualizing health office data.",
-    //     image: "assets/img/projects/pho/admin_dashboard.png",
-    //     tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
-    //     link: "projects.html?project=pho_dashboard"
-    // }
+    {
+        title: "Health Office Dashboard",
+        description: "A responsive web dashboard for managing and visualizing health office data.",
+        image: "assets/img/projects/pho/admin-dashboard.png",
+        tech: ["html5", "css3-alt", "js", "bootstrap", "php", "database"],
+        link: "projects.html?project=pho_dashboard"
+    }
 ];
 
 function getTechBadge(icon) {
@@ -112,7 +98,6 @@ function getTechBadge(icon) {
 }
 
 function generateFeaturedProjectsHTML() {
-    // --- Swiper for large screens ---
     let html = `
         <div class="d-none d-lg-block p-3 p-md-4">
             <div class="project-header d-flex justify-content-between align-items-center mb-4">
@@ -156,9 +141,9 @@ function generateFeaturedProjectsHTML() {
         `;
     });
 
-    html += `</div></div></div>`; // Close Swiper + container
+    html += `</div></div></div>`;
 
-    // --- Static layout for small/medium screens ---
+
     html += `<div class="d-block d-lg-none p-3 p-md-4">
         <div class="project-header d-flex justify-content-between align-items-center mb-4">
             <h5 class="d-flex align-items-center gap-2 fw-semibold mb-0">
@@ -342,7 +327,6 @@ const projectsData = {
             "assets/img/projects/portfolio/portfoliov22.png",
             "assets/img/projects/portfolio/portfoliov23.png",
         ],
-        github: "",
         live: "https://flip-portfolio.vercel.app/",
     },
 
@@ -357,27 +341,37 @@ const projectsData = {
             "assets/img/projects/portfolio/portfoliov13.png",
             "assets/img/projects/portfolio/portfoliov14.png",
         ],
-        github: "",
         live: "https://flipxs.vercel.app/",
+    },
+
+    pho_dashboard: {
+        logo: "assets/img/projects/pho/pho-logo.png",
+        title: "Health Office Dashboard",
+        description: "Health Office Dashboard is an internal management system I built to digitize and streamline administrative workflows within a health office. The application enables employees to submit requests such as gate passes, vehicle requests, and other official transactions while providing administrators with tools to manage employee records, monitor request statuses, and process approvals efficiently. The responsive dashboard centralizes office operations, improving accessibility, transparency, and overall workflow management.",
+        images: [
+            "assets/img/projects/pho/pho-1.png",
+            "assets/img/projects/pho/pho-2.png",
+            "assets/img/projects/pho/pho-3.png",
+            "assets/img/projects/pho/pho-4.png",
+        ],
     },
 };
 
 function displayProject(projectId) {
     const project = projectsData[projectId];
     const container = document.getElementById("featured_projects-placeholder");
-    container.innerHTML = ''; // Clear any existing content
+    container.innerHTML = '';
 
     const project_card = document.createElement("div");
     project_card.className = "project_card p-3 p-md-4 pb-0 mb-0";
 
-    // Add images
     const isDarkMode =
         document.documentElement.getAttribute("data-theme") === "dark";
 
     const projectImages =
         project.images?.light
             ? (isDarkMode ? project.images.dark : project.images.light)
-            : project.images; // fallback for other projects
+            : project.images;
 
     const imagesHtml = projectImages
         .map((src, index) => {
@@ -409,12 +403,17 @@ function displayProject(projectId) {
             <button class="w-100 text-end btn btn-link btn-sm p-0 toggle-desc d-md-none" data-target="desc-${project.title.replace(/\s+/g, '')}">Read more</button>
         </div>
 
-        <a href="${project.live}" class="btn btn-primary btn-sm" target="_blank">
-            <i class="fas fa-eye me-1"></i> View Live
-        </a>
-        <a href="${project.github}" class="btn btn-dark btn-sm" target="_blank">
-            <i class="fab fa-github me-1"></i> View GitHub
-        </a>
+        ${project.live ? `
+            <a href="${project.live}" class="btn btn-primary btn-sm" target="_blank">
+                <i class="fas fa-eye me-1"></i> View Live
+            </a>
+        ` : ''}
+
+        ${project.github ? `
+            <a href="${project.github}" class="btn btn-dark btn-sm" target="_blank">
+                <i class="fab fa-github me-1"></i> View GitHub
+            </a>
+        ` : ''}
     </div>
 
     <div class="p-1 mt-3">
