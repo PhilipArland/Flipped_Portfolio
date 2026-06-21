@@ -9,7 +9,10 @@ const featuredProjects = [
     {
         title: "Cozy To-Do List",
         description: "A cozy productivity app for managing daily tasks with an integrated music player.",
-        image: "assets/img/projects/cozy/cozy-thumbnail-light.png",
+        image: {
+            light: "assets/img/projects/cozy/cozy-thumbnail-light.png",
+            dark: "assets/img/projects/cozy/cozy-thumbnail-dark.png"
+        },
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=cozy"
     },
@@ -97,6 +100,19 @@ function getTechBadge(icon) {
     `;
 }
 
+function getProjectKey(project) {
+    const match = project.link?.match(/project=([^&]+)/);
+    return match ? match[1] : null;
+}
+
+function getThumbnailSrc(project) {
+    if (project.image && typeof project.image === 'object') {
+        const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+        return isDarkMode ? project.image.dark : project.image.light;
+    }
+    return project.image; // plain string, unchanged for other projects
+}
+
 function generateFeaturedProjectsHTML() {
     let html = `
         <div class="d-none d-lg-block p-3 p-md-4">
@@ -118,7 +134,7 @@ function generateFeaturedProjectsHTML() {
         html += `
             <div class="swiper-slide">
                 <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-                    <img src="${project.image}" alt="${project.title}" class="card-img-top">
+                    <img src="${getThumbnailSrc(project)}" data-project="${getProjectKey(project)}" alt="${project.title}" class="card-img-top">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="details mb-0">
                             <h6 class="fw-bold mb-2">${project.title}</h6>
@@ -155,7 +171,7 @@ function generateFeaturedProjectsHTML() {
     featuredProjects.forEach(project => {
         html += `
             <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden mb-3">
-                <img src="${project.image}" alt="${project.title}" class="card-img-top">
+                <img src="${getThumbnailSrc(project)}" data-project="${getProjectKey(project)}" alt="${project.title}" class="card-img-top">
                 <div class="card-body d-flex flex-column justify-content-between">
                     <div class="details mb-0">
                         <h6 class="fw-bold mb-2">${project.title}</h6>
@@ -184,7 +200,7 @@ function generateFeaturedProjectsHTML() {
 
 function updateProjectImages(projectId) {
     const project = projectsData[projectId];
-    if (!project.images?.light) return; // nothing to swap for single-image-set projects
+    if (!project.images?.light) return;
 
     const isDarkMode = document.documentElement.getAttribute("data-theme") === "dark";
     const newImages = isDarkMode ? project.images.dark : project.images.light;
@@ -195,6 +211,18 @@ function updateProjectImages(projectId) {
     });
 }
 
+function updateFeaturedThumbnails() {
+    const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+    featuredProjects.forEach(project => {
+        if (project.image && typeof project.image === 'object') {
+            const key = getProjectKey(project);
+            const newSrc = isDarkMode ? project.image.dark : project.image.light;
+            document.querySelectorAll(`img[data-project="${key}"]`).forEach(img => {
+                img.src = newSrc;
+            });
+        }
+    });
+}
 
 const projectsData = {
     tracker: {

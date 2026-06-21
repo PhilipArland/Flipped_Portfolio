@@ -17,6 +17,7 @@ function toggleDarkMode() {
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
 
     applyThemeAndLogo();
+    updateFeaturedThumbnails();
 
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get("project");
