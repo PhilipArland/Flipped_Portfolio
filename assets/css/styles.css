@@ -519,4 +519,8 @@ body {
         padding:.6rem .85rem;
         font-size:.9rem;
     }
+
+    .about-me .swiper-slide img {
+        height: 200px;
+    }
 }

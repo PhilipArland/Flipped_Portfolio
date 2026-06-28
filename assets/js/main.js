@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Swiper(".highlightsSwiper", {
         loop: true,
-        slidesPerView: 2,
+        slidesPerView: 3,
         slidesPerGroup: 1,
         spaceBetween: 10,
         navigation: {
