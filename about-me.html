@@ -27,7 +27,7 @@
 
             <div class="col-md-9 about-me">
                 <div class="card shadow-sm rounded-4 border-0 overflow-hidden mb-3">
-                    <img src="assets/img/about-me/banner3.jpg" class="cover" alt="">
+                    <img src="assets/img/about-me/banner.jpg" class="cover" alt="">
                     <div class="px-4 pb-4">
                         <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end">
                             <img src="assets/img/me.png" class="rounded-circle shadow profile flex-shrink-0" width="170"
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                             <div class="ms-md-auto mt-3 mt-md-0 d-flex gap-2">
-                                <a href="https://facebook.com/yourprofile" target="_blank"
+                                <a href="https://facebook.com/philiparland" target="_blank"
                                     class="btn btn-primary rounded-3">
                                     <i class="fa-brands fa-facebook-f me-1"></i>
                                     Follow
@@ -76,6 +76,7 @@
                                 <button class="nav-link" onclick="showSection('highlights', this)">Highlights</button>
                                 <button class="nav-link" onclick="showSection('about', this)">About</button>
                                 <button class="nav-link" onclick="showSection('education', this)">Education</button>
+                                <button class="nav-link" onclick="showSection('experience', this)">Experience</button>
                             </div>
                         </div>
                     </div>
@@ -83,27 +84,41 @@
                 </div>
 
                 <div id="highlights-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+
                     <h5 class="fw-semibold mb-3">
                         <i class="fa-solid fa-circle-play me-1"></i> Highlights
                     </h5>
-                    <div class="row g-2">
-                        <div class="col-3">
-                            <img src="assets/img/about-me/img-1.jpg" class="img-fluid rounded-3 w-100"
-                                style="aspect-ratio: 2/3; object-fit:cover;">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/about-me/img-2.jpg" class="img-fluid rounded-3 w-100"
-                                style="aspect-ratio: 2/3; object-fit:cover;">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/about-me/img-3.jpg" class="img-fluid rounded-3 w-100"
-                                style="aspect-ratio: 2/3; object-fit:cover;">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/about-me/img-4.jpg" class="img-fluid rounded-3 w-100"
-                                style="aspect-ratio: 2/3; object-fit:cover;">
+
+                    <div class="swiper highlightsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-1.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-5.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-3.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-4.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-6.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/about-me/img-7.jpg" class="img-fluid rounded-3 w-100"
+                                    style="aspect-ratio:2/3;object-fit:cover;height:320px;">
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
 
                 <div id="about-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
@@ -138,7 +153,8 @@
                         <span>Gaming • Programming • UI/UX Design</span>
                     </div>
                 </div>
-<div id="education-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+
+                <div id="education-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
                     <h5 class="fw-semibold mb-3">
                         <i class="fas fa-graduation-cap me-1"></i> Education
                     </h5>
@@ -154,9 +170,7 @@
                             </small>
                         </div>
                     </div>
-
                     <hr>
-
                     <div class="d-flex align-items-start mb-1">
                         <img src="assets/img/sjnhs.png" alt="SJNHS Logo" width="80" height="80" class="me-3">
                         <div>
@@ -171,7 +185,39 @@
                     </div>
                 </div>
 
-                
+                <div id="experience-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                    <h5 class="fw-semibold mb-3">
+                        <i class="fas fa-briefcase me-1"></i> Experience
+                    </h5>
+
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="80" height="80" class="me-3">
+                        <div>
+                            <h6 class="mb-0 fw-semibold">Website Developer</h6>
+                            <small class="d-block">Spinnaker Global Services</small>
+                            <small class="d-block">Puerto Princesa City, Palawan</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                October 2025 - Present
+                            </small>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/pho.png" alt="PHO Logo" width="80" height="80" class="me-3">
+                        <div>
+                            <h6 class="mb-0 fw-semibold">On-the-Job Training</h6>
+                            <small class="d-block">Provincial Health Office</small>
+                            <small class="d-block">Puerto Princesa City, Palawan</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                February 2025 - April 2025
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 

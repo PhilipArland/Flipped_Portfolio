@@ -71,6 +71,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    new Swiper(".highlightsSwiper", {
+        loop: true,
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".highlights-next",
+            prevEl: ".highlights-prev",
+        },
+        breakpoints: {
+            768: { slidesPerView: 3 },
+            992: { slidesPerView: 4 },
+        },
+    });
+
     // Project details check
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get("project");
@@ -171,10 +186,12 @@ function showSection(section, btn) {
     const about = document.getElementById("about-section");
     const highlights = document.getElementById("highlights-section");
     const education = document.getElementById("education-section");
+    const experience = document.getElementById("experience-section");
 
     about.style.display = (section === "all" || section === "about") ? "" : "none";
     highlights.style.display = (section === "all" || section === "highlights") ? "" : "none";
     education.style.display = (section === "all" || section === "education") ? "" : "none";
+    experience.style.display = (section === "all" || section === "experience") ? "" : "none";
 }
 
 function setActiveNavLinks() {
