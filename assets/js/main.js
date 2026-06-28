@@ -160,31 +160,21 @@ function loadHTML(id, file, callback) {
 }
 
 function showSection(section, btn) {
-    // Update active tab
-    document.querySelectorAll('.nav-pills .nav-link').forEach(link => {
-        link.classList.remove('active');
+    document.querySelectorAll(".nav-link").forEach(link => {
+        link.classList.remove("active");
+        link.classList.add("text-secondary");
     });
-    btn.classList.add('active');
 
-    const about = document.getElementById('about-section');
-    const highlights = document.getElementById('highlights-section');
+    btn.classList.add("active");
+    btn.classList.remove("text-secondary");
 
-    switch (section) {
-        case 'all':
-            about.style.display = 'block';
-            highlights.style.display = 'block';
-            break;
+    const about = document.getElementById("about-section");
+    const highlights = document.getElementById("highlights-section");
+    const education = document.getElementById("education-section");
 
-        case 'about':
-            about.style.display = 'block';
-            highlights.style.display = 'none';
-            break;
-
-        case 'highlights':
-            about.style.display = 'none';
-            highlights.style.display = 'block';
-            break;
-    }
+    about.style.display = (section === "all" || section === "about") ? "" : "none";
+    highlights.style.display = (section === "all" || section === "highlights") ? "" : "none";
+    education.style.display = (section === "all" || section === "education") ? "" : "none";
 }
 
 function setActiveNavLinks() {

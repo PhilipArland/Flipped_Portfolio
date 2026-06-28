@@ -27,17 +27,11 @@
 
             <div class="col-md-9 about-me">
                 <div class="card shadow-sm rounded-4 border-0 overflow-hidden mb-3">
-
-                    <!-- Cover -->
                     <img src="assets/img/about-me/banner3.jpg" class="cover" alt="">
-
-                    <!-- Profile Header -->
                     <div class="px-4 pb-4">
-
                         <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end">
                             <img src="assets/img/me.png" class="rounded-circle shadow profile flex-shrink-0" width="170"
                                 height="170" alt="">
-
                             <div class="ms-md-4 mt-3 flex-grow-1 text-center text-md-start">
                                 <h2 class="fw-bold mb-1">Philip Arland Alili</h2>
                                 <p class="text-muted mb-2">
@@ -59,15 +53,17 @@
                                 </div>
                             </div>
                             <div class="ms-md-auto mt-3 mt-md-0 d-flex gap-2">
-                                <button class="btn btn-primary rounded-3">
-                                    <i class="fa-solid fa-plus me-1"></i>
+                                <a href="https://facebook.com/yourprofile" target="_blank"
+                                    class="btn btn-primary rounded-3">
+                                    <i class="fa-brands fa-facebook-f me-1"></i>
                                     Follow
-                                </button>
+                                </a>
 
-                                <button class="btn btn-light border rounded-3">
+                                <a href="mailto:philiparland@gmail.com?subject=Portfolio%20Inquiry"
+                                    class="btn btn-light border rounded-3">
                                     <i class="fa-solid fa-envelope me-1"></i>
-                                    Message
-                                </button>
+                                    Email
+                                </a>
                             </div>
 
                         </div>
@@ -77,19 +73,16 @@
                         <div class="d-flex justify-content-between align-items-center pt-2">
                             <div class="nav nav-pills gap-1">
                                 <button class="nav-link active" onclick="showSection('all', this)">All</button>
-                                <button class="nav-link" onclick="showSection('about', this)">About</button>
                                 <button class="nav-link" onclick="showSection('highlights', this)">Highlights</button>
+                                <button class="nav-link" onclick="showSection('about', this)">About</button>
+                                <button class="nav-link" onclick="showSection('education', this)">Education</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <div id="about-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
-
-                </div>
-
-                <div id="highlights-section" class="card border-0 shadow-sm rounded-4 p-3">
+                <div id="highlights-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
                     <h5 class="fw-semibold mb-3">
                         <i class="fa-solid fa-circle-play me-1"></i> Highlights
                     </h5>
@@ -98,23 +91,87 @@
                             <img src="assets/img/about-me/img-1.jpg" class="img-fluid rounded-3 w-100"
                                 style="aspect-ratio: 2/3; object-fit:cover;">
                         </div>
-
                         <div class="col-3">
                             <img src="assets/img/about-me/img-2.jpg" class="img-fluid rounded-3 w-100"
                                 style="aspect-ratio: 2/3; object-fit:cover;">
                         </div>
-
                         <div class="col-3">
                             <img src="assets/img/about-me/img-3.jpg" class="img-fluid rounded-3 w-100"
                                 style="aspect-ratio: 2/3; object-fit:cover;">
                         </div>
-
                         <div class="col-3">
                             <img src="assets/img/about-me/img-4.jpg" class="img-fluid rounded-3 w-100"
                                 style="aspect-ratio: 2/3; object-fit:cover;">
                         </div>
                     </div>
                 </div>
+
+                <div id="about-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                    <h5 class="fw-semibold mb-3">
+                        <i class="fa-solid fa-circle-info me-2"></i>About
+                    </h5>
+                    <p class="text-muted">
+                        I'm Philip, a passionate web developer who enjoys creating modern, responsive websites and
+                        learning new technologies.
+                    </p>
+                    <hr class="mt-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-location-dot fa-fw text-secondary me-3"></i>
+                        <span>Lives in <strong>Palawan, Philippines</strong></span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-brands fa-instagram fa-fw text-secondary me-3"></i>
+                        <a href="https://instagram.com/dumb.flip" target="_blank" class="text-decoration-none">
+                            @dumb.flip
+                        </a>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-code fa-fw text-secondary me-3"></i>
+                        <span>Website Developer</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-graduation-cap fa-fw text-secondary me-3"></i>
+                        <span>BS Computer Science</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fa-solid fa-heart fa-fw text-secondary me-3"></i>
+                        <span>Gaming • Programming • UI/UX Design</span>
+                    </div>
+                </div>
+<div id="education-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                    <h5 class="fw-semibold mb-3">
+                        <i class="fas fa-graduation-cap me-1"></i> Education
+                    </h5>
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/psu.jpg" alt="PSU Logo" width="80" height="80" class="me-3">
+                        <div>
+                            <h6 class="mb-0 fw-semibold">BS in Computer Science</h6>
+                            <small class="d-block">Palawan State University</small>
+                            <small class="d-block">Puerto Princesa City, Palawan</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                2024 - 2025
+                            </small>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex align-items-start mb-1">
+                        <img src="assets/img/sjnhs.png" alt="SJNHS Logo" width="80" height="80" class="me-3">
+                        <div>
+                            <h6 class="mb-0 fw-semibold">General Academic Strand</h6>
+                            <small class="d-block">San Jose National High School</small>
+                            <small class="d-block">Puerto Princesa City, Palawan</small>
+                            <small class="d-block text-muted">
+                                <i class="fas fa-calendar me-1"></i>
+                                2019 - 2020
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
 
