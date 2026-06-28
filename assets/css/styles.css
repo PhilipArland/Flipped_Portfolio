@@ -437,3 +437,13 @@ body {
     outline: none !important;
     box-shadow: none !important;
 }
+
+.about-me img {
+    /* filter: grayscale(100%); */
+}
+
+.about-me img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    transition: all 0.2s ease-in-out;
+}
