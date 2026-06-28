@@ -194,7 +194,7 @@ function showSection(section, btn) {
 
     container.prepend(sections[section]);
 
-    ["highlights", "about", "education", "experience"].forEach(key => {
+    ["highlights", "about", "experience", "education"].forEach(key => {
         if (key !== section) {
             container.append(sections[key]);
         }
