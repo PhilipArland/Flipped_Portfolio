@@ -448,17 +448,35 @@ body {
     transition: all 0.2s ease-in-out;
 } */
 
-.about-me .cover {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    object-position: center 90%;
+.about-me .cover{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    object-position:center 90%;
 }
 
-.about-me .profile {
-    border: 4px solid var(--bg-body);
-    object-fit: cover;
-    margin-top: -70px;
+.about-me .profile{
+    margin-top:-60px;
+    border:5px solid var(--bg-card);
+    object-fit:cover;
+}
+
+.nav-pills .nav-link{
+    color: #65676b;
+    font-weight: 600;
+    padding: .75rem 1rem;
+}
+
+.nav-pills .nav-link:hover{
+    background: #f0f2f5;
+    color: #1877f2;
+}
+
+.nav-pills .nav-link.active{
+    background: transparent;
+    color: #1877f2;
+    border-bottom: 3px solid #1877f2;
+    border-radius: 0 !important;
 }
 
 @media (max-width: 640px) {
