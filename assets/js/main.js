@@ -192,24 +192,13 @@ function showSection(section, btn) {
         experience: document.getElementById("experience-section")
     };
 
-    if (section === "all") {
-        container.append(
-            sections.about,
-            sections.highlights,
-            sections.education,
-            sections.experience
-        );
-    } else {
-        // Move selected section to the top
-        container.prepend(sections[section]);
+    container.prepend(sections[section]);
 
-        // Keep the rest in their original order
-        ["about", "highlights", "education", "experience"].forEach(key => {
-            if (key !== section) {
-                container.append(sections[key]);
-            }
-        });
-    }
+    ["highlights", "about", "education", "experience"].forEach(key => {
+        if (key !== section) {
+            container.append(sections[key]);
+        }
+    });
 }
 
 function setActiveNavLinks() {
