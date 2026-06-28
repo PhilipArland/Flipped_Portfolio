@@ -448,6 +448,18 @@ body {
     transition: all 0.2s ease-in-out;
 } */
 
+.about-me .swiper-slide img {
+    object-fit: cover;
+    height: 320px;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+}
+
+.about-me .swiper-slide img:hover {
+    transform: scale(1.03);
+    transition: all 0.2s ease-in-out;
+}
+
 .about-me .cover{
     width:100%;
     height:260px;
