@@ -183,15 +183,33 @@ function showSection(section, btn) {
     btn.classList.add("active");
     btn.classList.remove("text-secondary");
 
-    const about = document.getElementById("about-section");
-    const highlights = document.getElementById("highlights-section");
-    const education = document.getElementById("education-section");
-    const experience = document.getElementById("experience-section");
+    const container = document.getElementById("profile-content");
 
-    about.style.display = (section === "all" || section === "about") ? "" : "none";
-    highlights.style.display = (section === "all" || section === "highlights") ? "" : "none";
-    education.style.display = (section === "all" || section === "education") ? "" : "none";
-    experience.style.display = (section === "all" || section === "experience") ? "" : "none";
+    const sections = {
+        about: document.getElementById("about-section"),
+        highlights: document.getElementById("highlights-section"),
+        education: document.getElementById("education-section"),
+        experience: document.getElementById("experience-section")
+    };
+
+    if (section === "all") {
+        container.append(
+            sections.about,
+            sections.highlights,
+            sections.education,
+            sections.experience
+        );
+    } else {
+        // Move selected section to the top
+        container.prepend(sections[section]);
+
+        // Keep the rest in their original order
+        ["about", "highlights", "education", "experience"].forEach(key => {
+            if (key !== section) {
+                container.append(sections[key]);
+            }
+        });
+    }
 }
 
 function setActiveNavLinks() {
