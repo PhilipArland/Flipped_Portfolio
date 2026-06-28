@@ -442,8 +442,21 @@ body {
     /* filter: grayscale(100%); */
 }
 
-.about-me img:hover {
+/* .about-me img:hover {
     filter: grayscale(0%);
     transform: scale(1.01);
     transition: all 0.2s ease-in-out;
+} */
+
+.about-me .cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.about-me .profile {
+    border: 4px solid var(--bg-body);
+    object-fit: cover;
+    margin-top: -70px;
 }
