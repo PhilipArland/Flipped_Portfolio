@@ -139,7 +139,6 @@ function setExperience(key) {
     carousel.to(0);
 }
 
-// default load
 document.addEventListener("DOMContentLoaded", () => {
     setExperience("spinnaker");
 });
@@ -158,6 +157,34 @@ function loadHTML(id, file, callback) {
             }
         })
         .catch(error => console.error(`Error loading ${file}:`, error));
+}
+
+function showSection(section, btn) {
+    // Update active tab
+    document.querySelectorAll('.nav-pills .nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    btn.classList.add('active');
+
+    const about = document.getElementById('about-section');
+    const highlights = document.getElementById('highlights-section');
+
+    switch (section) {
+        case 'all':
+            about.style.display = 'block';
+            highlights.style.display = 'block';
+            break;
+
+        case 'about':
+            about.style.display = 'block';
+            highlights.style.display = 'none';
+            break;
+
+        case 'highlights':
+            about.style.display = 'none';
+            highlights.style.display = 'block';
+            break;
+    }
 }
 
 function setActiveNavLinks() {

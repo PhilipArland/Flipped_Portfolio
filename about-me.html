@@ -76,28 +76,20 @@
 
                         <div class="d-flex justify-content-between align-items-center pt-2">
                             <div class="nav nav-pills gap-1">
-                                <a href="#" class="nav-link active rounded-3">
-                                    All
-                                </a>
-
-                                <a href="#" class="nav-link text-secondary rounded-3">
-                                    About
-                                </a>
-
-                                <a href="#" class="nav-link text-secondary rounded-3">
-                                    Highlights
-                                </a>
+                                <button class="nav-link active" onclick="showSection('all', this)">All</button>
+                                <button class="nav-link" onclick="showSection('about', this)">About</button>
+                                <button class="nav-link" onclick="showSection('highlights', this)">Highlights</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
 
-                <div class="card border-0 shadow-sm rounded-4 p-3 mb-3">
+                <div id="about-section" class="card border-0 shadow-sm rounded-4 p-3 mb-3">
 
                 </div>
 
-                <div class="card border-0 shadow-sm rounded-4 p-3">
+                <div id="highlights-section" class="card border-0 shadow-sm rounded-4 p-3">
                     <h5 class="fw-semibold mb-3">
                         <i class="fa-solid fa-circle-play me-1"></i> Highlights
                     </h5>
