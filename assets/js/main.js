@@ -69,17 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     new Swiper(".highlightsSwiper", {
-        loop: true,
-        loopAdditionalSlides: 2,
-
         slidesPerView: 3.4,
         slidesPerGroup: 1,
         spaceBetween: 10,
-
-        navigation: {
-            nextEl: ".highlights-next",
-            prevEl: ".highlights-prev",
-        },
 
         breakpoints: {
             768: {
