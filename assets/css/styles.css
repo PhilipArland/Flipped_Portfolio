@@ -412,9 +412,7 @@ body {
 }
 
 .about-me .swiper-slide img {
-    object-fit: cover;
-    height: 320px;
-    aspect-ratio: 2/3;
+    height: 300px;
     cursor: pointer;
 }
 

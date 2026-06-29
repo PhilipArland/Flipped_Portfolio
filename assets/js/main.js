@@ -70,16 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Swiper(".highlightsSwiper", {
         loop: true,
-        slidesPerView: 3,
+        loopAdditionalSlides: 2,
+
+        slidesPerView: 3.4,
         slidesPerGroup: 1,
         spaceBetween: 10,
+
         navigation: {
             nextEl: ".highlights-next",
             prevEl: ".highlights-prev",
         },
+
         breakpoints: {
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
+            768: {
+                slidesPerView: 3.4,
+            },
+            992: {
+                slidesPerView: 4.4,
+            },
         },
     });
 
@@ -238,7 +246,7 @@ function setExperience(key) {
                 <hr>
 
                 <h6 class="fw-semibold mb-2">
-                    <i class="fa-solid fa-list-check me-2"></i>
+                    <i class="fa-solid fa-list-check text-purple me-2"></i>
                     Responsibilities
                 </h6>
 
