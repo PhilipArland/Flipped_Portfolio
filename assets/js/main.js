@@ -178,7 +178,7 @@ function setExperience(key) {
 
             <img src="${exp.banner}" class="p-2 img-fluid rounded-4 w-100 exp-img">
 
-            <div class="row g-2 px-2">
+            <div class="row g-1 g-md-2 px-2">
                 ${exp.gallery.map(img => `
                     <div class="col-3">
                         <img src="${img}" class="img-fluid rounded-1 w-100 gallery-img">
@@ -191,7 +191,7 @@ function setExperience(key) {
             <div class="p-2">
 
                 <h6 class="fw-semibold mb-3">
-                    <i class="fa-solid fa-briefcase me-2"></i>
+                    <i class="fa-solid fa-briefcase text-purple me-2"></i>
                     Work Details
                 </h6>
 
