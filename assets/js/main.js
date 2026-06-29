@@ -37,14 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Load sidebar
     loadHTML("sidebar-placeholder", "includes/sidebar.html", () => {
         sidebarLoaded = true;
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         checkAndSetActive();
     });
 
-    // Load navbar & apply theme/logo
     loadHTML("navbar-placeholder", "includes/navbar.html", () => {
         navbarLoaded = true;
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
         checkAndSetActive();
     });
 
-    // Featured projects setup
     const featuredPlaceholder = document.getElementById("featured_projects-placeholder");
     if (featuredPlaceholder) {
         featuredPlaceholder.innerHTML = generateFeaturedProjectsHTML();
@@ -95,67 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const githubSection = document.getElementById("github-contributions");
         if (githubSection) githubSection.style.display = "none";
     }
-
-    if (document.getElementById("portfolioCarousel")) {
-        setExperience("spinnaker");
-    }
-});
-
-const experiences = {
-    spinnaker: {
-        title: "Spinnaker Global Services",
-        subtitle: "Maintained and optimized company websites, implemented UI improvements, and contributed to enhancing overall user experience and interface consistency.",
-        images: [
-            "assets/img/experience/_LRC2791.jpg",
-            "assets/img/experience/_LRC1794.jpg",
-            "assets/img/experience/halloween.jpg",
-            "assets/img/experience/halloween2.jpg"
-        ]
-    },
-
-    pho: {
-        title: "Provincial Health Office (OJT)",
-        subtitle: "Assisted in office operations and documentation while gaining hands-on experience in a government environment.",
-        images: [
-            "assets/img/experience/1.png",
-            "assets/img/experience/2.png",
-            "assets/img/experience/3.png",
-            "assets/img/experience/4.png",
-        ]
-    }
-};
-
-function setExperience(key) {
-    document.querySelectorAll('.work-exp-btn').forEach(btn => {
-        btn.classList.remove('active');
-    });
-
-    document.getElementById(`btn-${key}`).classList.add('active');
-
-    const exp = experiences[key];
-
-    document.getElementById("overlayTitle").textContent = exp.title;
-    document.getElementById("overlaySubtitle").textContent = exp.subtitle;
-
-    let html = "";
-    exp.images.forEach((img, i) => {
-        html += `
-            <div class="carousel-item ${i === 0 ? 'active' : ''}">
-                <img src="${img}" class="d-block w-100 exp-img">
-            </div>
-        `;
-    });
-
-    document.getElementById("carouselContent").innerHTML = html;
-
-    const carousel = bootstrap.Carousel.getOrCreateInstance(
-        document.querySelector("#portfolioCarousel")
-    );
-    carousel.to(0);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    setExperience("spinnaker");
 });
 
 function loadHTML(id, file, callback) {
