@@ -92,6 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const githubSection = document.getElementById("github-contributions");
         if (githubSection) githubSection.style.display = "none";
     }
+
+    setExperience("spinnaker");
 });
 
 function loadHTML(id, file, callback) {
@@ -108,6 +110,128 @@ function loadHTML(id, file, callback) {
             }
         })
         .catch(error => console.error(`Error loading ${file}:`, error));
+}
+
+const experiences = {
+    spinnaker: {
+        company: "Spinnaker Global Services",
+        logo: "assets/img/spinnaker.png",
+        banner: "assets/img/experience/_LRC2791.jpg",
+        gallery: [
+            "assets/img/experience/_LRC1794.jpg",
+            "assets/img/experience/_LRC2902.jpg",
+            "assets/img/experience/halloween.jpg",
+            "assets/img/experience/halloween2.jpg"
+        ],
+        position: "Website Developer",
+        employment: "Full-time",
+        duration: "October 2025 - Present",
+        location: "Puerto Princesa, Palawan",
+        responsibilities: [
+            "Maintained and updated company websites.",
+            "Improved website speed and performance.",
+            "Performed basic SEO improvements.",
+            "Fixed website bugs and minor issues."
+        ]
+    },
+
+    pho: {
+        company: "Provincial Health Office",
+        logo: "assets/img/pho.png",
+        banner: "assets/img/experience/1.png",
+        gallery: [
+            "assets/img/experience/2.png",
+            "assets/img/experience/3.jpg",
+            "assets/img/experience/4.jpg",
+            "assets/img/experience/5.png"
+        ],
+        position: "On-the-Job Training",
+        employment: "Internship",
+        duration: "February 2025 - April 2025",
+        location: "Puerto Princesa, Palawan",
+        responsibilities: [
+            "Assisted in maintaining office records.",
+            "Provided technical assistance.",
+            "Supported daily office tasks."
+        ]
+    }
+};
+
+function setExperience(key) {
+    const exp = experiences[key];
+
+    document.querySelectorAll(".work-exp-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    document.getElementById("btn-" + key).classList.add("active");
+
+    document.getElementById("experience-details").innerHTML = `
+        <div class="card shadow-sm rounded-4 border-0 p-1 p-md-2 mb-2 mb-md-3 exp-banner">
+
+            <div class="d-flex align-items-center p-2 gap-2">
+                <img src="${exp.logo}" width="40" height="40">
+                <p class="mb-0 fw-semibold">${exp.company}</p>
+            </div>
+
+            <img src="${exp.banner}" class="p-2 img-fluid rounded-4 w-100 exp-img">
+
+            <div class="row g-2 px-2">
+                ${exp.gallery.map(img => `
+                    <div class="col-3">
+                        <img src="${img}" class="img-fluid rounded-1 w-100 gallery-img">
+                    </div>
+                `).join("")}
+            </div>
+
+            <hr class="mb-0">
+
+            <div class="p-2">
+
+                <h6 class="fw-semibold mb-3">
+                    <i class="fa-solid fa-briefcase me-2"></i>
+                    Work Details
+                </h6>
+
+                <div class="row g-3">
+
+                    <div class="col-6">
+                        <small class="text-muted d-block">Position</small>
+                        <div class="fw-semibold">${exp.position}</div>
+                    </div>
+
+                    <div class="col-6">
+                        <small class="text-muted d-block">Employment</small>
+                        <div class="fw-semibold">${exp.employment}</div>
+                    </div>
+
+                    <div class="col-6">
+                        <small class="text-muted d-block">Duration</small>
+                        <div class="fw-semibold">${exp.duration}</div>
+                    </div>
+
+                    <div class="col-6">
+                        <small class="text-muted d-block">Location</small>
+                        <div class="fw-semibold">${exp.location}</div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <h6 class="fw-semibold mb-2">
+                    <i class="fa-solid fa-list-check me-2"></i>
+                    Responsibilities
+                </h6>
+
+                <ul class="mb-0 ps-3">
+                    ${exp.responsibilities.map(item => `<li>${item}</li>`).join("")}
+                </ul>
+
+            </div>
+
+        </div>
+    `;
 }
 
 function showSection(section, btn) {
