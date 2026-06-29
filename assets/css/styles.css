@@ -384,13 +384,14 @@ body {
     width: 100%;
     height: 40vh;
     object-fit: cover;
-    object-position: bottom;
+    object-position: center;
 }
 
 .gallery-img {
     height: 100px;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
 
 .work-exp-btn {
@@ -478,6 +479,6 @@ body {
         font-size: .9rem;
     }
     .about-me .swiper-slide img { height: 200px;}
-    .exp-banner .exp-img { height: 27vh;}
-    .gallery-img { height: 70px; }
+    .exp-banner .exp-img { height: 30vh;}
+    .gallery-img { height: 80px; }
 }

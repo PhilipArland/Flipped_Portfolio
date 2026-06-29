@@ -158,6 +158,14 @@ const experiences = {
     }
 };
 
+function changeBanner(img) {
+    const banner = document.getElementById("experience-banner");
+
+    const oldBanner = banner.src;
+    banner.src = img.src;
+    img.src = oldBanner;
+}
+
 function setExperience(key) {
     localStorage.setItem("selectedExperience", key);
     const exp = experiences[key];
@@ -176,12 +184,20 @@ function setExperience(key) {
                 <p class="mb-0 fw-semibold">${exp.company}</p>
             </div>
 
-            <img src="${exp.banner}" class="p-2 img-fluid rounded-4 w-100 exp-img">
+            <img
+                id="experience-banner"
+                src="${exp.banner}"
+                class="p-2 img-fluid rounded-4 w-100 exp-img"
+            >
 
             <div class="row g-1 g-md-2 px-2">
                 ${exp.gallery.map(img => `
                     <div class="col-3">
-                        <img src="${img}" class="img-fluid rounded-1 w-100 gallery-img">
+                        <img
+                            src="${img}"
+                            class="img-fluid rounded-1 w-100 gallery-img"
+                            onclick="changeBanner(this)"
+                        >
                     </div>
                 `).join("")}
             </div>
