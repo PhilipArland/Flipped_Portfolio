@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (githubSection) githubSection.style.display = "none";
     }
 
-    setExperience("spinnaker");
+    const selectedExperience = localStorage.getItem("selectedExperience") || "spinnaker";
+    setExperience(selectedExperience);
 });
 
 function loadHTML(id, file, callback) {
@@ -124,7 +125,7 @@ const experiences = {
             "assets/img/experience/halloween2.jpg"
         ],
         position: "Website Developer",
-        employment: "Full-time",
+        employment: "Probationary",
         duration: "October 2025 - Present",
         location: "Puerto Princesa, Palawan",
         responsibilities: [
@@ -158,6 +159,7 @@ const experiences = {
 };
 
 function setExperience(key) {
+    localStorage.setItem("selectedExperience", key);
     const exp = experiences[key];
 
     document.querySelectorAll(".work-exp-btn").forEach(btn => {
