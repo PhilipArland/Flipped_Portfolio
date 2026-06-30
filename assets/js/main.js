@@ -127,12 +127,7 @@ const experiences = {
         employment: "Probationary",
         duration: "October 2025 - Present",
         location: "Puerto Princesa, Palawan",
-        responsibilities: [
-            "Maintained and updated company websites.",
-            "Improved website speed and performance.",
-            "Performed basic SEO improvements.",
-            "Fixed website bugs and minor issues."
-        ]
+        responsibilities: "Assisted in maintaining and updating company websites by fixing minor issues, improving website speed and performance, and applying basic SEO practices to support a better user experience.",
     },
 
     pho: {
@@ -148,11 +143,7 @@ const experiences = {
         employment: "Internship",
         duration: "February 2025 - April 2025",
         location: "Puerto Princesa, Palawan",
-        responsibilities: [
-            "Assisted in maintaining office records.",
-            "Provided technical assistance.",
-            "Supported daily office tasks."
-        ]
+        responsibilities: "Assisted with maintaining office records, providing technical assistance, and supporting daily office tasks throughout the internship.",
     }
 };
 
@@ -231,17 +222,6 @@ function setExperience(key) {
                     </div>
 
                 </div>
-
-                <hr>
-
-                <h6 class="fw-semibold mb-2">
-                    <i class="fa-solid fa-list-check text-purple me-2"></i>
-                    Responsibilities
-                </h6>
-
-                <ul class="mb-0 ps-3">
-                    ${exp.responsibilities.map(item => `<li>${item}</li>`).join("")}
-                </ul>
 
             </div>
 
