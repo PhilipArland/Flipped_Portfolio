@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     new Swiper(".highlightsSwiper", {
-        slidesPerView: 3.4,
+        slidesPerView: 2.4,
         slidesPerGroup: 1,
         spaceBetween: 10,
 
         breakpoints: {
             768: {
-                slidesPerView: 3.4,
+                slidesPerView: 2.4,
             },
             992: {
                 slidesPerView: 4.4,
@@ -122,7 +122,7 @@ const experiences = {
             "assets/img/experience/_LRC1794.jpg",
             "assets/img/experience/_LRC2902.jpg",
             "assets/img/experience/halloween.jpg",
-            "assets/img/experience/halloween2.jpg"
+            // "assets/img/experience/halloween2.jpg"
         ],
         position: "Website Developer",
         employment: "Probationary",
@@ -144,7 +144,7 @@ const experiences = {
             "assets/img/experience/2.png",
             "assets/img/experience/3.jpg",
             "assets/img/experience/4.jpg",
-            "assets/img/experience/5.png"
+            // "assets/img/experience/5.png"
         ],
         position: "On-the-Job Training",
         employment: "Internship",
@@ -192,7 +192,7 @@ function setExperience(key) {
 
             <div class="row g-1 g-md-2 px-2">
                 ${exp.gallery.map(img => `
-                    <div class="col-3">
+                    <div class="col-4">
                         <img
                             src="${img}"
                             class="img-fluid rounded-1 w-100 gallery-img"

@@ -466,17 +466,30 @@ body {
 
 
 @media (max-width: 640px) {
-    .about-me .cover { height: 150px;}
+    .about-me .cover {
+        height: 150px;
+    }
+
     .about-me .profile {
         width: 120px;
         height: 120px;
         margin-top: -60px;
     }
+
     .nav-pills .nav-link {
         padding: .6rem .85rem;
         font-size: .9rem;
     }
-    .about-me .swiper-slide img { height: 200px;}
-    .exp-banner .exp-img { height: 30vh;}
-    .gallery-img { height: 80px; }
+
+    .about-me .swiper-slide img {
+        height: 200px;
+    }
+
+    .exp-banner .exp-img {
+        height: 30vh;
+    }
+
+    .gallery-img {
+        height: 80px;
+    }
 }
