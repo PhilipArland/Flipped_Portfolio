@@ -122,7 +122,6 @@ const experiences = {
             "assets/img/experience/_LRC1794.jpg",
             "assets/img/experience/_LRC2902.jpg",
             "assets/img/experience/halloween.jpg",
-            // "assets/img/experience/halloween2.jpg"
         ],
         position: "Website Developer",
         employment: "Probationary",
@@ -144,7 +143,6 @@ const experiences = {
             "assets/img/experience/2.png",
             "assets/img/experience/3.jpg",
             "assets/img/experience/4.jpg",
-            // "assets/img/experience/5.png"
         ],
         position: "On-the-Job Training",
         employment: "Internship",
@@ -177,7 +175,7 @@ function setExperience(key) {
     document.getElementById("btn-" + key).classList.add("active");
 
     document.getElementById("experience-details").innerHTML = `
-        <div class="card shadow-sm rounded-4 border-0 p-1 p-md-2 mb-2 mb-md-3 exp-banner">
+        <div class="card shadow-sm rounded-4 border-0 p-2 p-md-3 mb-2 mb-md-3 exp-banner">
 
             <div class="d-flex align-items-center p-2 gap-2">
                 <img src="${exp.logo}" width="40" height="40">
@@ -202,10 +200,9 @@ function setExperience(key) {
                 `).join("")}
             </div>
 
-            <hr class="mb-0">
-
-            <div class="p-2">
-
+            
+            <div class="p-2 pt-0">
+            <hr>
                 <h6 class="fw-semibold mb-3">
                     <i class="fa-solid fa-briefcase text-purple me-2"></i>
                     Work Details

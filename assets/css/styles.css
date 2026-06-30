@@ -388,7 +388,7 @@ body {
 }
 
 .gallery-img {
-    height: 100px;
+    height: 17vh;
     object-fit: cover;
     object-position: center;
     cursor: pointer;
