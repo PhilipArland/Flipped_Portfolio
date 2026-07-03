@@ -256,31 +256,7 @@ function showSection(section, btn) {
     });
 }
 
-const lightbox = document.getElementById('imgLightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-const closeBtn = document.querySelector('.lightbox-close');
 
-document.querySelectorAll('.highlightsSwiper .swiper-slide img').forEach((img) => {
-    img.style.cursor = 'pointer';
-    img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-    });
-});
-
-function closeLightbox() {
-    lightbox.classList.remove('active');
-    lightboxImg.src = '';
-}
-
-closeBtn.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
-});
 
 function setActiveNavLinks() {
     let currentPath = window.location.pathname.replace(/\/+$/, '');
@@ -347,6 +323,31 @@ if (hero) {
     });
 }
 
+const lightbox = document.getElementById('imgLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const closeBtn = document.querySelector('.lightbox-close');
+
+document.querySelectorAll('.highlightsSwiper .swiper-slide img').forEach((img) => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+    });
+});
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+}
+
+closeBtn.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
 
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("toggle-desc")) {
