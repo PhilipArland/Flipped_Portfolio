@@ -289,8 +289,9 @@ const dragons = document.querySelectorAll('.drag-overlay');
 
 if (hero) {
     hero.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth) * 80;
-        const y = (e.clientY / window.innerHeight) * 80;
+        const rect = hero.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
 
         hero.style.setProperty('--mouse-x', `${x}%`);
         hero.style.setProperty('--mouse-y', `${y}%`);

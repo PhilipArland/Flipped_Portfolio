@@ -228,16 +228,14 @@ body {
 .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 150vw;
-    height: 150vh;
-    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(0, 0, 0, 0.85) 25%);
+    inset: 0;
+    background: radial-gradient(circle 280px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 30%,
+            rgba(0, 0, 0, 0.6) 65%,
+            rgba(0, 0, 0, 0.85) 100%);
     pointer-events: none;
     z-index: 2;
-    transform: translate(-25%, -25%);
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
