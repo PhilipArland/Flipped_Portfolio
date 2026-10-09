@@ -125,7 +125,7 @@ const experiences = {
             "assets/img/experience/_LRC3121.jpg",
         ],
         position: "Website Developer",
-        employment: "Probationary",
+        employment: "Regular",
         duration: "October 2025 - Present",
         location: "Puerto Princesa, Palawan",
         responsibilities: "Assisted in maintaining and updating company websites by fixing minor issues, improving website speed and performance, and applying basic SEO practices to support a better user experience.",
