@@ -23,13 +23,13 @@ const featuredProjects = [
         tech: ["html5", "css3-alt", "js", "bootstrap"],
         link: "projects.html?project=pacman"
     },
-    {
-        title: "Expense Tracker",
-        description: "A modern expense tracker that helps users monitor and organize spending habits.",
-        image: "assets/img/projects/tracker/tracker-thumbnail.png",
-        tech: ["html5", "css3-alt", "js", "bootstrap"],
-        link: "projects.html?project=tracker"
-    },
+    // {
+    //     title: "Expense Tracker",
+    //     description: "A modern expense tracker that helps users monitor and organize spending habits.",
+    //     image: "assets/img/projects/tracker/tracker-thumbnail.png",
+    //     tech: ["html5", "css3-alt", "js", "bootstrap"],
+    //     link: "projects.html?project=tracker"
+    // },
     {
         title: "Pension House Website",
         description: "A clean, static site showcasing rooms, tour packages, and key guest info.",
@@ -225,17 +225,17 @@ function updateFeaturedThumbnails() {
 }
 
 const projectsData = {
-    tracker: {
-        logo: "assets/img/projects/tracker/logo.png",
-        title: "Expense Tracker",
-        description: "Expense Tracker is a personal finance web app I built using HTML, CSS, JavaScript, and Bootstrap. It allows users to record income and expenses, categorize transactions, and monitor their financial activity through an intuitive interface. Data is stored in LocalStorage, ensuring expenses and budgets remain available across sessions without requiring a backend.", images: [
-            "assets/img/projects/tracker/tracker.png",
-            "assets/img/projects/tracker/tracker1.png",
-            "assets/img/projects/tracker/tracker2.png",
-        ],
-        github: "https://github.com/PhilipArland/expense_tracker",
-        live: "https://flipped-tracker.vercel.app",
-    },
+    // tracker: {
+    //     logo: "assets/img/projects/tracker/logo.png",
+    //     title: "Expense Tracker",
+    //     description: "Expense Tracker is a personal finance web app I built using HTML, CSS, JavaScript, and Bootstrap. It allows users to record income and expenses, categorize transactions, and monitor their financial activity through an intuitive interface. Data is stored in LocalStorage, ensuring expenses and budgets remain available across sessions without requiring a backend.", images: [
+    //         "assets/img/projects/tracker/tracker.png",
+    //         "assets/img/projects/tracker/tracker1.png",
+    //         "assets/img/projects/tracker/tracker2.png",
+    //     ],
+    //     github: "https://github.com/PhilipArland/expense_tracker",
+    //     live: "https://flipped-tracker.vercel.app",
+    // },
     cozy: {
         logo: "assets/img/projects/cozy/logo.png",
         title: "Cozy To-Do List",
