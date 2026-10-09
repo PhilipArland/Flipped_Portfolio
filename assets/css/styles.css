@@ -39,20 +39,15 @@ body {
     background-color: var(--bg-body);
 }
 
-.col-md-3.my-sidebar {
-    transition: width 0.3s ease, min-width 0.3s ease,
-        flex-basis 0.3s ease;
-}
-
 @media (min-width: 768px) and (max-width: 1023.98px) {
     .col-md-3.my-sidebar {
-        width: 224px !important;
-        min-width: 224px !important;
-        flex: 0 0 224px;
+        width: 230px !important;
+        min-width: 230px !important;
+        flex: 0 0 230px;
     }
 
     .col-md-9.my-home {
-        width: calc(100% - 224px) !important;
+        width: calc(100% - 230px) !important;
         flex: 1;
         min-width: 0;
     }
@@ -65,42 +60,7 @@ body {
     }
 }
 
-@media (min-width: 1024px) {
-
-    .col-md-3.my-sidebar,
-    .col-md-3.exp-right {
-        width: 300px !important;
-        min-width: 300px !important;
-        flex: 0 0 300px;
-    }
-
-    .col-md-9.my-home {
-        width: calc(100% - 300px) !important;
-        flex: 1;
-        min-width: 0;
-    }
-
-    .exp-middle {
-        width: auto !important;
-        flex: 1 1 0;
-        min-width: 0;
-    }
-}
-
-
 @media (min-width: 768px) and (max-width: 1299.98px) {
-    .col-md-3.my-sidebar {
-        width: 224px !important;
-        min-width: 224px !important;
-        flex: 0 0 224px;
-    }
-
-    .col-md-9.my-home {
-        width: calc(100% - 224px) !important;
-        flex: 1;
-        min-width: 0;
-    }
-
     .exp-middle,
     .exp-right {
         width: 100%;
@@ -110,7 +70,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-
     .col-md-3.my-sidebar,
     .col-md-3.exp-right {
         width: 300px !important;
