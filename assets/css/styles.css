@@ -39,6 +39,83 @@ body {
     background-color: var(--bg-body);
 }
 
+
+
+
+/* @media (min-width: 1024px) {
+    .col-md-3.my-sidebar {
+        width: 223px !important;
+    }
+    .col-md-9.my-home {
+        width: 785px !important;
+    }
+} */
+
+/* @media (min-width: 1440px) {
+    .col-md-3.my-sidebar {
+        width: calc(25% - 5rem) !important;
+    }
+
+    .col-md-9.my-home {
+        width: calc(75% + 5rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-3.my-sidebar {
+        width: calc(25% + 3rem) !important;
+    }
+
+    .col-md-9.my-home {
+        width: calc(75% - 3rem) !important;
+    }
+} */
+
+
+
+/* Large desktop: 1440px and above */
+
+
+/* Smooth sidebar transition */
+.col-md-3.my-sidebar {
+    transition: width 0.3s ease, min-width 0.3s ease,
+                flex-basis 0.3s ease;
+}
+
+/* Tablet: 768px–1023px */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .col-md-3.my-sidebar {
+        width: 224px !important;
+        min-width: 224px !important;
+        flex: 0 0 224px;
+    }
+
+    .col-md-9.my-home {
+        width: calc(100% - 224px) !important;
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Desktop: 1024px and above */
+@media (min-width: 1024px) {
+    .col-md-3.my-sidebar {
+        width: 300px !important;
+        min-width: 300px !important;
+        flex: 0 0 300px;
+    }
+
+    .col-md-9.my-home {
+        width: calc(100% - 300px) !important;
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Medium desktop/tablet: 768px to 1439px */
+
+
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -220,7 +297,7 @@ body {
 /* Hero Styles */
 .hero {
     position: relative;
-    height: 300px;
+    height: 330px;
     font-family: 'Cinzel', serif;
     color: #ffffff;
     background: url('../img/bg.jpg') top center no-repeat;
