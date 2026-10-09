@@ -17,223 +17,98 @@
 <body>
     <!-- Navbar -->
     <nav id="navbar-placeholder" class="navbar navbar-expand-lg bg-card shadow-sm d-md-none mb-1 mb-md-3 px-2">
-
     </nav>
 
-    <div class="container p-1 p-md-3">
+    <div class="container-fluid p-1 p-md-4">
         <div class="row gx-3">
-            <div class="col-md-3 d-none d-md-block">
+            <div class="col-md-3 d-none d-md-block my-sidebar">
                 <div id="sidebar-placeholder" class="sidebar card rounded-4 border-0 d-flex justify-content-between">
                 </div>
             </div>
 
-            <!-- <div class="col-md-6">
-                <div class="card shadow-sm rounded-4 border-0 p-1 p-md-2 mb-2 mb-md-3 exp-banner">
-                    <div class="d-flex align-items-center p-2 gap-2">
-                        <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="40" height="40">
+            <div class="col-md-9 my-home">
+                <div class="row gx-3">
+                    <div class="col-md-9 exp-middle" id="experience-details"></div>
 
-                        <p class="mb-0 fw-semibold">
-                            Spinnaker Global Services
-                        </p>
-                    </div>
+                    <div class="col-md-3 exp-right">
+                        <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4 mb-2 mb-md-3">
+                            <h5 class="fw-semibold mb-3">
+                                <i class="fas fa-user-tie me-2 text-purple"></i> Work Experience
+                            </h5>
 
-                    <img src="assets/img/experience/_LRC2791.jpg" class="p-2 img-fluid rounded-4 w-100 exp-img"
-                        alt="Spinnaker Global Services">
+                            <button class="btn w-100 mb-2 text-start work-exp-btn" id="btn-spinnaker"
+                                onclick="setExperience('spinnaker')">
+                                <div class="d-flex align-items-start mb-1">
+                                    <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="40" height="40"
+                                        class="me-3">
 
-                    <div class="row g-2 px-2">
-                        <div class="col-3">
-                            <img src="assets/img/experience/_LRC1794.jpg" class="img-fluid rounded-1 w-100 gallery-img"
-                                alt="">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/experience/_LRC2902.jpg" class="img-fluid rounded-1 w-100 gallery-img"
-                                alt="">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/experience/halloween.jpg" class="img-fluid rounded-1 w-100 gallery-img"
-                                alt="">
-                        </div>
-                        <div class="col-3">
-                            <img src="assets/img/experience/halloween2.jpg"
-                                class="img-fluid rounded-1 w-100 gallery-img" alt="">
-                        </div>
-                    </div>
+                                    <div class="lh-sm">
+                                        <h6 class="mb-0 fw-semibold">Website Developer</h6>
+                                        <small class="d-block">Spinnaker Global Services</small>
+                                        <small class="d-block">Puerto Princesa City, Palawan</small>
+                                        <small class="d-block text-muted">
+                                            <i class="fas fa-calendar me-1"></i>
+                                            Oct 2025 - Present
+                                        </small>
+                                    </div>
+                                </div>
+                            </button>
 
-                    <hr class="mb-0">
-
-                    <div class="p-2">
-                        <h6 class="fw-semibold mb-3">
-                            <i class="fa-solid fa-briefcase me-2"></i>
-                            Work Details
-                        </h6>
-
-                        <div class="row g-3">
-
-                            <div class="col-6">
-                                <small class="text-muted d-block">Position</small>
-                                <div class="fw-semibold">Website Developer</div>
-                            </div>
-
-                            <div class="col-6">
-                                <small class="text-muted d-block">Employment</small>
-                                <div class="fw-semibold">Full-time</div>
-                            </div>
-
-                            <div class="col-6">
-                                <small class="text-muted d-block">Duration</small>
-                                <div class="fw-semibold">October 2025 – Present</div>
-                            </div>
-
-                            <div class="col-6">
-                                <small class="text-muted d-block">Location</small>
-                                <div class="fw-semibold">Puerto Princesa, Palawan</div>
-                            </div>
-
-                        </div>
-
-                        <hr>
-
-                        <h6 class="fw-semibold mb-2">
-                            <i class="fa-solid fa-list-check me-2"></i>
-                            Responsibilities
-                        </h6>
-
-                        <ul class="mb-0 ps-3">
-                            <li>Maintained and updated company websites.</li>
-                            <li>Improved website speed and performance.</li>
-                            <li>Performed basic SEO improvements.</li>
-                            <li>Fixed website bugs and minor issues.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div> -->
-
-            <div class="col-md-6" id="experience-details"></div>
-
-            <div class="col-md-3">
-                <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4 mb-2 mb-md-3">
-                    <h5 class="fw-semibold mb-3">
-                        <i class="fas fa-user-tie me-2 text-purple"></i> Work Experience
-                    </h5>
-
-                    <button class="btn w-100 mb-2 text-start work-exp-btn" id="btn-spinnaker"
-                        onclick="setExperience('spinnaker')">
-                        <div class="d-flex align-items-start mb-1">
-                            <img src="assets/img/spinnaker.png" alt="Spinnaker Logo" width="40" height="40"
-                                class="me-3">
-
-                            <div class="lh-sm">
-                                <h6 class="mb-0 fw-semibold">Website Developer</h6>
-                                <small class="d-block">Spinnaker Global Services</small>
-                                <small class="d-block">Puerto Princesa City, Palawan</small>
-                                <small class="d-block text-muted">
-                                    <i class="fas fa-calendar me-1"></i>
-                                    Oct 2025 - Present
-                                </small>
-                            </div>
-                        </div>
-                    </button>
-
-                    <button class="btn w-100 text-dark mb-2 text-start work-exp-btn" id="btn-pho"
-                        onclick="setExperience('pho')">
-                        <div class="d-flex align-items-start mb-1">
-                            <img src="assets/img/pho.png" alt="PHO Logo" width="40" height="40" class="me-3">
-                            <div class="lh-sm ls-1">
-                                <h6 class="mb-0 fw-semibold">On-the-Job Training</h6>
-                                <small class="d-block">Provincial Health Office</small>
-                                <small class="d-block">Puerto Princesa City, Palawan</small>
-                                <small class="d-block text-muted">
-                                    <i class="fas fa-calendar me-1"></i>
-                                    Feb 2025 - Apr 2025
-                                </small>
-                            </div>
-                        </div>
-                    </button>
-                    <small class="text-muted d-block mb-2 text-center">
-                        Click an experience to view details
-                    </small>
-                </div>
-
-
-
-                <!-- <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4 mb-2 mb-md-3">
-                    <h5 class="fw-semibold mb-4 gap-2">
-                        <i class="fas fa-award me-1 text-purple"></i> Certifications
-                    </h5>
-
-                    <div class="d-flex align-items-start mb-1">
-                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo"
-                            class="img-fluid rounded-circle me-3" width="50" height="50" class="me-3">
-
-                        <div class="lh-md">
-                            <h6 class="mb-0 fw-semibold">Responsive Web Design</h6>
-                            <small class="d-block">freeCodeCamp</small>
-                            <small class="d-block text-muted">
-                                <i class="fas fa-calendar me-1"></i>
-                                Issued Jan 2025
+                            <button class="btn w-100 text-dark mb-2 text-start work-exp-btn" id="btn-pho"
+                                onclick="setExperience('pho')">
+                                <div class="d-flex align-items-start mb-1">
+                                    <img src="assets/img/pho.png" alt="PHO Logo" width="40" height="40" class="me-3">
+                                    <div class="lh-sm ls-1">
+                                        <h6 class="mb-0 fw-semibold">On-the-Job Training</h6>
+                                        <small class="d-block">Provincial Health Office</small>
+                                        <small class="d-block">Puerto Princesa City, Palawan</small>
+                                        <small class="d-block text-muted">
+                                            <i class="fas fa-calendar me-1"></i>
+                                            Feb 2025 - Apr 2025
+                                        </small>
+                                    </div>
+                                </div>
+                            </button>
+                            <small class="text-muted d-block mb-2 text-center">
+                                Click an experience to view details
                             </small>
+                        </div>
 
-                            <a href="#certModal" class="small text-muted" data-bs-toggle="modal">
-                                View Certificate
-                            </a>
+                        <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4">
+                            <h5 class="fw-semibold mb-3">
+                                <i class="fa-solid fa-paper-plane me-2 text-purple"></i>
+                                Get in Touch
+                            </h5>
+
+                            <div class="d-flex justify-content-center gap-4 fs-3 mb-2 mb-md-3">
+                                <a href="mailto:philiparland@gmail.com" class="text-secondary">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </a>
+
+                                <a href="https://www.facebook.com/philiparland" target="_blank" class="text-secondary">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/dumb.flip" target="_blank" class="text-secondary">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                                <a href="https://github.com/PhilipArland" target="_blank" class="text-secondary">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/philip-arland-383260370" target="_blank"
+                                    class="text-secondary">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                            <p class="text-muted small text-center">
+                                Thanks for stopping by. Feel free to reach out anytime.
+                            </p>
                         </div>
                     </div>
-
-                    <hr>
-
-                    <div class="d-flex align-items-start mb-1">
-                        <img src="assets/img/freecodecamp.png" alt="freeCodeCamp Logo"
-                            class="img-fluid rounded-circle me-3" width="50" height="50" class="me-3">
-
-                        <div class="lh-md">
-                            <h6 class="mb-0 fw-semibold">Data Analysis with Python</h6>
-                            <small class="d-block">freeCodeCamp</small>
-                            <small class="d-block text-muted">
-                                <i class="fas fa-calendar me-1"></i>
-                                Issued Nov 2023
-                            </small>
-                            <a href="#certModal1" class="small text-muted" data-bs-toggle="modal">
-                                View Certificate
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-
-                <div class="card shadow-sm rounded-4 border-0 p-3 p-md-4">
-                    <h5 class="fw-semibold mb-3">
-                        <i class="fa-solid fa-paper-plane me-2 text-purple"></i>
-                        Get in Touch
-                    </h5>
-
-                    <div class="d-flex justify-content-center gap-4 fs-3 mb-2 mb-md-3">
-                        <a href="mailto:philiparland@gmail.com" class="text-secondary">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-
-                        <a href="https://www.facebook.com/philiparland" target="_blank" class="text-secondary">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/dumb.flip" target="_blank" class="text-secondary">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="https://github.com/PhilipArland" target="_blank" class="text-secondary">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/philip-arland-383260370" target="_blank" class="text-secondary">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </div>
-
-                    <p class="text-muted small text-center">
-                        Thanks for stopping by. Feel free to reach out anytime.
-                    </p>
-
                 </div>
-
             </div>
         </div>
     </div>

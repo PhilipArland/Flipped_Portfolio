@@ -122,6 +122,7 @@ const experiences = {
             "assets/img/experience/_LRC1794.jpg",
             "assets/img/experience/_LRC2902.jpg",
             "assets/img/experience/halloween.jpg",
+            "assets/img/experience/_LRC3121.jpg",
         ],
         position: "Website Developer",
         employment: "Probationary",
@@ -138,6 +139,7 @@ const experiences = {
             "assets/img/experience/2.png",
             "assets/img/experience/3.jpg",
             "assets/img/experience/4.jpg",
+            "assets/img/experience/5.png",
         ],
         position: "On-the-Job Training",
         employment: "Internship",
@@ -181,7 +183,7 @@ function setExperience(key) {
 
             <div class="row g-1 g-md-2 px-2">
                 ${exp.gallery.map(img => `
-                    <div class="col-4">
+                    <div class="col-3">
                         <img
                             src="${img}"
                             class="img-fluid rounded-1 w-100 gallery-img"
