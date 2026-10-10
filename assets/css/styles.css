@@ -61,6 +61,7 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1299.98px) {
+
     .exp-middle,
     .exp-right {
         width: 100%;
@@ -70,6 +71,7 @@ body {
 }
 
 @media (min-width: 1200px) {
+
     .col-md-3.my-sidebar,
     .col-md-3.exp-right {
         width: 300px !important;
@@ -478,6 +480,12 @@ body {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
+}
+
+/* About Me Styles */
+
+.socials a {
+    white-space: nowrap;
 }
 
 .about-me .swiper-slide img {
