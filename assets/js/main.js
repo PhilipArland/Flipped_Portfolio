@@ -117,44 +117,40 @@ const experiences = {
     spinnaker: {
         company: "Spinnaker Global Services",
         logo: "assets/img/spinnaker.png",
-        banner: "assets/img/experience/_LRC2791.jpg",
         gallery: [
-            "assets/img/experience/_LRC1794.jpg",
-            "assets/img/experience/_LRC2902.jpg",
-            "assets/img/experience/halloween.jpg",
-            "assets/img/experience/_LRC3121.jpg",
+            "assets/img/experience/halloween_party_2026.jpg",
+            "assets/img/experience/team_building_2026.jpg",
+            "assets/img/experience/team_building_2026-2.jpg",
+            "assets/img/experience/year_end_party_2025.jpg",
         ],
         position: "Website Developer",
         employment: "Regular",
         duration: "October 2025 - Present",
         location: "Puerto Princesa, Palawan",
-        responsibilities: "Assisted in maintaining and updating company websites by fixing minor issues, improving website speed and performance, and applying basic SEO practices to support a better user experience.",
     },
 
     pho: {
         company: "Provincial Health Office",
         logo: "assets/img/pho.png",
-        banner: "assets/img/experience/1.png",
         gallery: [
+            "assets/img/experience/1.png",
             "assets/img/experience/2.png",
             "assets/img/experience/3.jpg",
             "assets/img/experience/4.jpg",
-            "assets/img/experience/5.png",
         ],
         position: "On-the-Job Training",
         employment: "Internship",
         duration: "February 2025 - April 2025",
         location: "Puerto Princesa, Palawan",
-        responsibilities: "Assisted with maintaining office records, providing technical assistance, and supporting daily office tasks throughout the internship.",
     }
 };
 
 function changeBanner(img) {
     const banner = document.getElementById("experience-banner");
-
-    const oldBanner = banner.src;
     banner.src = img.src;
-    img.src = oldBanner;
+
+    document.querySelectorAll(".gallery-img").forEach(el => el.classList.remove("active"));
+    img.classList.add("active");
 }
 
 function setExperience(key) {
@@ -177,16 +173,16 @@ function setExperience(key) {
 
             <img
                 id="experience-banner"
-                src="${exp.banner}"
+                src="${exp.gallery[0]}"
                 class="p-2 img-fluid rounded-4 w-100 exp-img"
             >
 
             <div class="row g-1 g-md-2 px-2">
-                ${exp.gallery.map(img => `
+                ${exp.gallery.map((img, i) => `
                     <div class="col-3">
                         <img
                             src="${img}"
-                            class="img-fluid rounded-1 w-100 gallery-img"
+                            class="img-fluid rounded-1 w-100 gallery-img ${i === 0 ? 'active' : ''}"
                             onclick="changeBanner(this)"
                         >
                     </div>

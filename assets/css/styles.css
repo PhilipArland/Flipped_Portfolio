@@ -451,8 +451,17 @@ body {
     object-fit: cover;
     object-position: center;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s, outline 0.2s;
 }
 
+.gallery-img:hover {
+    opacity: 0.85;
+}
+
+.gallery-img.active {
+    opacity: 0.6;
+}
 
 @media (min-width: 1024px) {
     .exp-banner .exp-img {
@@ -599,4 +608,18 @@ body {
         height: 30vh;
     }
 
+}
+
+@media (min-width: 1025px) {
+    .px-md-6 {
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .px-md-6 {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
 }
